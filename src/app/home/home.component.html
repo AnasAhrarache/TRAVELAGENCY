@@ -1,0 +1,84 @@
+<div class="container-fluid p-0">
+
+    <nav class="navbar">
+        <div class="logo">
+            <img >
+        </div>
+        
+        <ul class="nav-links">
+          <li><a href="#" id="homepage">Home</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Travel</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="#" class="btn login">Login</a>
+          <a href="#" class="btn signup">Sign Up</a>
+        </div>
+      </nav>
+    <!-- Background Image -->
+
+    
+    <div class="hero position-relative text-white">
+      <div class="overlay position-absolute w-100 h-100"></div>
+      <div class="content position-absolute " >
+        <h1 id="h11">Start your unforgettable journey with us.</h1>
+        <p id="p1">The best travel for your journey begins now</p>
+      </div>
+    </div>
+  
+    <!-- Booking Form -->
+    <div class="booking-form container bg-white shadow p-4 rounded">
+      <form>
+        <div class="row">
+          <div class="col-md-3">
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" class="form-control" placeholder="Destination" />
+          </div>
+          <div class="col-md-2" id="personinput">
+            <label for="persons">Person</label>
+            <select id="persons" class="form-control">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="checkin">Check In</label>
+            <input type="date" id="checkin" class="form-control" />
+          </div>
+          <div class="col-md-3">
+            <label for="checkout">Check Out</label>
+            <input type="date" id="checkout" class="form-control" />
+          </div>
+          <div class="col-md-1 d-flex align-items-end">
+            <!-- From Uiverse.io by cssbuttons-io --> 
+<button class="booknowbtn">
+    <span class="transition"></span>
+    <span class="label">BOOK NOW</span>
+  </button>
+  
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <section class="popular-destinations">
+    <h2 id="H2populardest">Popular Destinations</h2>
+    <hr id="orangeline">
+    <p id="Ppopulardest">Most popular destinations around the world, from historical places to natural wonders.</p>
+    <div class="navigation-buttons">
+      <button class="prev-button" (click)="prevCard()">&lt;</button>
+      <button class="next-button" (click)="nextCard()">&gt;</button>
+    </div>
+    <div class="destination-cards" [style.transform]="transformStyle">
+      <div class="destination-card" *ngFor="let card of cards">
+        <img [src]="card.image" alt="{{ card.name }}">
+        <h3>{{ card.name }}</h3>
+        <p>🔻 {{ card.location }}</p>
+      </div>
+    </div>
+  </section>
+  
