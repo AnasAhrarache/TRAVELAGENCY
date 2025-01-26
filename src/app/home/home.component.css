@@ -5,7 +5,7 @@
 }
 .hero {
     height: 100vh;
-    background: url('D:/Angular/TravelAgency/src/assets/images/wallpaperflare.com_wallpaper.jpg') no-repeat center center/cover;
+    background: url('assets/images/wallpaperflare.com_wallpaper.jpg') no-repeat center center/cover;
   }
 
   .navbar {
@@ -22,7 +22,7 @@
   }
   
   .logo {
-    background-image: url('D:/Angular/TravelAgency/src/assets/images/3-removebg-preview.png');
+    background-image: url('assets/images/3-removebg-preview.png');
     z-index: 3;
     height: 200px ;
     width: 200px;
