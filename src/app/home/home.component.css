@@ -21,8 +21,8 @@
     
   }
   
-  .logo {
-    background-image: url('/assets/images/3-removebg-preview.png');
+  .logo img {
+    
     z-index: 3;
     height: 200px ;
     width: 200px;
