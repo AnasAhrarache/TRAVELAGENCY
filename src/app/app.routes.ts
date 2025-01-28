@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component'; // Ensure HomeComponent is standalone
+import { FoodComponent } from './food/food.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent } // Root route for HomeComponent
+  { path: '', component: HomeComponent },// Root route for HomeComponent
+  { path: 'food', component: FoodComponent },
+
 ];
