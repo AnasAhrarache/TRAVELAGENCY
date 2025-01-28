@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
+
+
 .hero {
     height: 100vh;
     background: url('/assets/images/wallpaperflare.com_wallpaper.jpg') no-repeat center center/cover;
@@ -183,7 +186,7 @@
 }
 
 .booknowbtn:active {
-  transform: scale(0.97);
+  transform: scale(1.01);
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -192,7 +195,7 @@
 .popular-destinations {
   padding: 2rem;
   text-align: left;
-  margin-top: 10%;
+  margin-top: 12%;
  
 }
 #H2populardest{
@@ -201,7 +204,8 @@
   margin-left: 5.5%;
   line-height: 2;
   
-  font-size: 40px;font-weight: 600;
+  font-size: 55px;
+  font-weight: 600;
 }
 #orangeline{
   width: 230px;
@@ -215,19 +219,23 @@
   margin-left: 5.5%;
   font-size: 16px;font-weight: 400;
   margin-top: 1%;
+  color: #777676;
 }
 
 
 .destination-card:hover{
-  transform: translateY(-5px);
+  transform:scale(1.01) translateY(-5px)translateX(5px);
   transition: transform 0.3s ease;
+  
   
 }
 
 .destination-card img {
   width: 100%;
-  height: 380px;
+  height: 400px;
   object-fit: cover;
+  border-radius: 10px;
+  
 }
 
 .destination-card h3 {
@@ -253,10 +261,14 @@
   flex-direction: column; /* Stack the cards vertically */
   transition: transform 0.5s ease; /* Smooth sliding effect */
   overflow: hidden; /* Hide cards outside the visible area */
-  height: 380px; /* Set a fixed height for the visible card (adjust as needed) */
+  height: 410px;
+   /* Set a fixed height for the visible card (adjust as needed) */
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 3.5rem;
+  margin-top: 3.9rem;
+  margin-left: 5%;
+  margin-right: 2%;
+  
 
 }
 
@@ -265,10 +277,13 @@
   text-align: center; /* Center-align the content */ 
   margin: 10px 0; /* Optional spacing between cards */
   width: 300px;
+  height: 400;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.0);
   position: relative;
+  margin-top: 2%;
+  
 }
 
 
@@ -307,4 +322,407 @@
 .hidden {
   display: none;
 }
+ /* ---------------------------------------------------------*/
+ #orangeline22{
+  position: absolute;
+  width: 690px;
+  height: 3.5px;
+  background-color:#e65a50;
+  border: 0;
+  top:1555px;
+  left: 30%;
+
+}
+
+.special-offer {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin-top: 7%;
+}
+#H2SpecialOffer{
   
+  font-family: 'playfair';
+  margin-left: 68%;
+  line-height: 2;
+  font-size: 55px;
+  font-weight: 600;
+}
+#orangeline2{
+  width: 190px;
+  height: 3.5px;
+  background-color:#e65a50;
+  border: 0;
+  margin-left: 80.5%;
+  margin-top: -1%;
+}
+#PSpecialOffer{
+  margin-left: 68%;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 1%;
+  color: #777676;
+}
+
+.btnn{
+  position: absolute;
+  top: 1657px;
+  left: 9%;
+  
+}
+.nav-btnN {
+  background-color: #f04e30;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 3px 17px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  margin-left: 15px;
+  
+}
+.nav-btnP {
+  background-color: #312c2b;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 3px 17px;
+  cursor: pointer;
+  border-radius: 5px;
+  
+ 
+}
+
+.cards-container {
+  display: flex;
+  overflow: hidden;
+  width: 90%;
+  height: 500px;
+  gap: 30px;
+  margin-top: 5%;
+  margin-left: 8%;
+
+}
+
+.card {
+  min-width: 380px;
+  max-width: 380px;
+  height: 430px;
+ 
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card.active {
+  transform: scale(1.03) translateY(5px)translateX(10px);
+  box-shadow: -5px 1px 6px rgba(0, 0, 0, 0.0);
+  max-width: 370px;
+  max-height: 500px;
+  border-radius: 16px;
+}
+.card:hover {
+  transform: scale(1.03) translateY(5px)translateX(10px);
+  box-shadow: -5px 1px 6px rgba(0, 0, 0, 0.0);
+  max-width: 370px;
+  max-height: 500px;
+  border-radius: 16px;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 10px;
+  color: #828282;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 10px;
+  color: #282727;
+}
+
+.price-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  font-weight: bold;
+  color: #de7765;
+}
+.prix{
+  font-size: 28px;
+  margin-left: -38%;
+  margin-top: -4px;
+}
+
+
+.nav-btnN:hover {
+  background-color: #d9432a;
+}
+.nav-btnP:hover {
+  background-color: #1c1a1a;
+}
+.detailbtn{
+  background-color: #f07c67;
+  color: #fff;
+  padding: 4px 15px;
+  border: none;
+  border-radius: 8px;
+  margin-top: -4%;
+  margin-left: -5%;
+}
+.detailbtn:hover{
+  background-color: #d36754;
+  transform: scale(1.05);
+}
+
+
+/* ---------------------------------------------------*/
+
+#orangelineee{
+  position: relative;
+  width: 690px;
+  height: 3.5px;
+  background-color:#e65a50;
+  border: 0;
+  left: 30%;
+
+}
+.blog-header{
+  position: relative;
+  margin-top: 6%;
+  background-color: rgb(41, 36, 63);
+  height: 840px;
+}
+#H2blog{
+  font-family: 'playfair';
+  margin-left: 6%;
+  line-height: 2;
+  font-size: 55px;
+  font-weight: 600;
+  color: white;
+}
+#orangelineblog{
+  width: 120px;
+  height: 3.5px;
+  background-color:#e65a50;
+  border: 0;
+  margin-left: 6%;
+  margin-top: -1%;
+}
+#Pblog{
+  margin-left: 6%;
+  font-size: 16px;font-weight: 400;
+  margin-top: 1%;
+  color: #cdc7c7;
+}
+
+
+
+.blog-post {
+  
+  border-radius: 22px;
+  overflow: hidden;
+  max-width: 450px;
+  margin-left: 6%;
+  margin-top: 3%;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.post-content {
+  position: absolute;
+  padding: 24px 0;
+  left: 38%;
+  right: 12%;
+  top: 260px;
+  
+}
+
+.post-title {
+  font-family: 'playfair';
+  font-weight: 500;
+  font-size: 52px;
+  color: white;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.post-subtitle {
+  font-family: 'playfair';
+  font-size: 32px;
+  color: white;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.post-description {
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-size: 17px;
+}
+
+.read-more {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.read-more::after {
+  content: "→";
+}
+
+/* -----------------------------------------------------------*/
+
+/* trip-planner.component.scss */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+
+.containertrip {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  margin-top: 6%;
+}
+
+.headertrip {
+  margin-bottom: 3rem;
+  text-align: right;
+  
+  .h1trip {
+    font-family: 'Playfair';
+    font-weight: 500;
+    font-size: 4.0rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left:50%;
+  }
+}
+
+.primary-button {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: #ff5252;
+  }
+}
+
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.trip-card {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-18px);
+  }
+  
+  .image-container {
+    height: 16rem;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .card-content {
+    padding: 1rem;
+    
+    .tour-type {
+      font-size: 0.875rem;
+      color: #666;
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+      font-weight: 500;
+    }
+  }
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  
+  .star-icon {
+    width: 1rem;
+    height: 1rem;
+    fill: #e2e8f0;
+    
+    &.filled {
+      fill: #fbbf24;
+    }
+  }
+}
+
+.duration {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.price {
+  margin-top: 1rem;
+  text-align: right;
+  color: #ff6b6b;
+  font-weight: 500;
+}
