@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
-
 
 .hero {
     height: 100vh;
@@ -593,13 +593,6 @@
 }
 
 /* -----------------------------------------------------------*/
-
-/* trip-planner.component.scss */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-}
 
 :host {
   display: block;

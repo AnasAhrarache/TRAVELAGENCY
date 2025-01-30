@@ -30,8 +30,8 @@
     position: absolute;
     top: -2.5rem;
     left: 5rem;
-    background-size: cover; /* Ensures the image covers the whole element */
-    background-position: center; /* Centers the image */
+    background-size: cover; 
+    background-position: center;
     background-repeat: no-repeat;
     border: none;
   }
@@ -93,28 +93,25 @@
     border-color: #e65a50;
 }
 
-/*-----------------------------------------------------------------------  */
-
-
-
 .container {
     display: flex; 
     flex-direction: row; 
     align-items: center; 
     justify-content: space-between; 
-    max-width: 1000px; /* Maximum width for the container */
+    max-width: 1000px; 
     margin: auto; 
-    height: 100%; /* Ensure it takes full height of the parent */
+    height: 100%; 
 }
 
 
 .description {
-    flex: 1; /* Allow the description to take available space */
-    margin-right: 20px; /* Space between description and images */
+    flex: 1; 
+    margin-right: 20px; 
 }
+
 .description {
     max-width: 800px; 
-    margin: 20px auto; /* Centrer la section */
+    margin: 20px auto; 
     padding: 20px;
    
 }
@@ -123,7 +120,7 @@
     font-family: 'playfair';
     font-size: 36px;
     font-weight: bold;
-    color: #a33d00; 
+    color: #e0590a; 
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
@@ -139,15 +136,14 @@
 .description p::first-letter {
     font-size: 28px;
     font-weight: bold;
-    color: #d35400;
+    color: #e0590a; 
 }
-
-
 
 .images_slide {
     flex: 1; 
     position: relative; 
 }
+
 
 .bcq_images {
     position: relative;
@@ -158,12 +154,20 @@
     align-items: center;
 }
 
+
 .slide-image {
+    display: none;
     max-width: 100%;
     max-height: 100%;
     border-radius: 15px;
     position: absolute;
+  }
+  
+.slide-image:first-child {
+    display: block;
 }
+  
+  
 
 .btn_slide {
     position: absolute;
@@ -198,11 +202,10 @@
     position: absolute;
     right: 5px;
 }
-
-
+  
 .navigation-dots {
     text-align: center; 
-    margin-top: 10px; /* Espacement au-dessus des points */
+    margin-top: 10px; 
 }
 
 .dot {
@@ -218,6 +221,9 @@
 .dot.active {
     background-color: #717171; 
 }
+
+
+/*-----------------------------------------------------------------------  */
 
 
 .top-breakfast {
@@ -260,15 +266,17 @@
 }
 
 .prev {
-    left: 10px; /* Position du bouton précédent */
+    left: 10px;
+    background-color:#000000; 
 }
 
 .next {
-    right: 10px; /* Position du bouton suivant */
+    right: 10px;
+    background-color: #ff5733; 
 }
 
 .prev:hover, .next:hover {
-    background-color: #e64a19; 
+    opacity: 0.8;
 }
 
 .cards {
@@ -339,4 +347,7 @@
     color: #777;
     margin-left: 5px;
 }
+
+
+
 

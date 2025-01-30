@@ -27,26 +27,26 @@
             </div>
             <div class="images_slide">
                 <div class="bcq_images">
-                    <img src="assets/images-food/tajine2.jpg"alt="Image 1" class="slide-image" />
-                    <img src="assets/images-food/logo (13).jpg" alt="Image 2" class="slide-image" />
-                    <img src="assets/images-food/logo (12).jpg" alt="Image 3" class="slide-image" style="display: none;" />
-                    <img src="assets/images-food/logo (14).jpg" alt="Image 4" class="slide-image" />
-                    <img src="assets/images-food/logo (15).jpg" alt="Image 5" class="slide-image" />
-                    <img src="assets/images-food/logo (16).jpg" alt="Image 6" class="slide-image" />
+                  <img src="assets/images-food/tajine2.jpg" alt="Image 1" class="slide-image" />
+                  <img src="assets/images-food/logo (13).jpg" alt="Image 2" class="slide-image" />
+                  <img src="assets/images-food/logo (12).jpg" alt="Image 3" class="slide-image" />
+                  <img src="assets/images-food/logo (14).jpg" alt="Image 4" class="slide-image" />
+                  <img src="assets/images-food/logo (15).jpg" alt="Image 5" class="slide-image" />
+                  <img src="assets/images-food/logo (16).jpg" alt="Image 6" class="slide-image" />
                 </div>
                 <div class="btn_slide">
-                    <button id="left">&lt;</button>  <!-- Affiche "<" -->
-                    <button id="right">&gt;</button> <!-- Affiche ">" -->
+                  <button id="left" (click)="onPrevButtonClick()">&lt;</button> <!-- Previous button -->
+                  <button id="right" (click)="onNextButtonClick()">&gt;</button> <!-- Next button -->
                 </div>
                 <div class="navigation-dots">
-                    <span class="dot" onclick="showImage(0)"></span>
-                    <span class="dot" onclick="showImage(1)"></span>
-                    <span class="dot" onclick="showImage(2)"></span>
-                    <span class="dot" onclick="showImage(3)"></span>
-                    <span class="dot" onclick="showImage(4)"></span>
-                    <span class="dot" onclick="showImage(5)"></span>
+                  <span class="dot" (click)="showImage(0)"></span>
+                  <span class="dot" (click)="showImage(1)"></span>
+                  <span class="dot" (click)="showImage(2)"></span>
+                  <span class="dot" (click)="showImage(3)"></span>
+                  <span class="dot" (click)="showImage(4)"></span>
+                  <span class="dot" (click)="showImage(5)"></span>
                 </div>
-            </div>
+              </div>              
         </div> 
     </div>
     <section class="top-breakfast">
