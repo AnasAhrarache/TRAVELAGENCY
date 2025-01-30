@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-fluid {
+    height: 100vh;
+    background: url('/assets/images-food/logo (1).jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent; /* Transparent background */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    z-index: 5;
+    height: 200px ;
+    width: 200px;
+    position: absolute;
+    top: -2.5rem;
+    left: 5rem;
+    background-size: cover; /* Ensures the image covers the whole element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-left: 20%;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#homepage {
+    color: #ff6f61;
+}
+
+.nav-links li a:hover {
+    color: #ff6f61; 
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    margin-right: 6%;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login {
+    color: #fff;
+}
+
+.login:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.signup {
+    background-color: #ff6f61;
+    color: #fff;
+    border: 2px solid #ff6f61;
+}
+
+.signup:hover {
+    background-color: #e65a50;
+    border-color: #e65a50;
+}
+
+/*-----------------------------------------------------------------------  */
+
+
+
+.container {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 1000px; /* Maximum width for the container */
+    margin: auto; 
+    height: 100%; /* Ensure it takes full height of the parent */
+}
+
+
+.description {
+    flex: 1; /* Allow the description to take available space */
+    margin-right: 20px; /* Space between description and images */
+}
+.description {
+    max-width: 800px; 
+    margin: 20px auto; /* Centrer la section */
+    padding: 20px;
+   
+}
+
+.description h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #a33d00; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 17px;
+    color:#ffecd2;
+    line-height: 1.6;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.description p::first-letter {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d35400;
+}
+
+
+
+.images_slide {
+    flex: 1; 
+    position: relative; 
+}
+
+.bcq_images {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+    position: absolute;
+}
+
+.btn_slide {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_slide button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px;
+    transition: background 0.3s;
+}
+
+.btn_slide button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#left {
+    position: absolute;
+    left: 5px;
+}
+
+#right {
+    position: absolute;
+    right: 5px;
+}
+
+
+.navigation-dots {
+    text-align: center; 
+    margin-top: 10px; /* Espacement au-dessus des points */
+}
+
+.dot {
+    height: 15px; 
+    width: 15px; 
+    margin: 0 5px;
+    background-color: #bbb; 
+    border-radius: 50%; 
+    display: inline-block; 
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171; 
+}
+
+
+.top-breakfast {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.top-breakfast h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff5733;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.top-breakfast h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative; 
+}
+
+.prev, .next {
+    background-color: #ff5733; 
+    color: white;
+    border: none;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 20%; 
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s; 
+}
+
+.prev {
+    left: 10px; /* Position du bouton précédent */
+}
+
+.next {
+    right: 10px; /* Position du bouton suivant */
+}
+
+.prev:hover, .next:hover {
+    background-color: #e64a19; 
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.price {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff5733;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #777;
+}
+
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #444;
+    margin-top: 10px;
+}
+
+.rating span {
+    color: #777;
+    margin-left: 5px;
+}
+

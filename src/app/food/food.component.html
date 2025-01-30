@@ -1,1 +1,110 @@
-<p>food works!</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="food.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mon Image</title>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/images-food/3-removebg-preview.png" alt="Description de l'image" />
+            </div>
+            
+            <ul class="nav-links">
+              <li><a href="#" id="homepage">Home</a></li>
+              <li><a href="#">Explore</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="auth-buttons">
+              <a href="#" class="btn login">Login</a>
+              <a href="#" class="btn signup">Sign Up</a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="description">
+                <h2>La Cuisine Marocaine</h2><br>
+                <p>
+                    La cuisine marocaine est un mélange riche de saveurs et d'épices. Elle est connue pour ses plats emblématiques tels que le couscous, le tajine et les pastillas. 
+                    Les ingrédients frais, les herbes aromatiques et les épices comme le cumin, le safran et le paprika sont essentiels dans la préparation des plats marocains. 
+                    La cuisine marocaine est également influencée par les traditions berbères, arabes et andalouses, ce qui en fait une expérience culinaire unique et délicieuse.
+                </p>
+            </div>
+            <div class="images_slide">
+                <div class="bcq_images">
+                    <img src="assets/images-food/tajine2.jpg"alt="Image 1" class="slide-image" />
+                    <img src="assets/images-food/logo (13).jpg" alt="Image 2" class="slide-image" />
+                    <img src="assets/images-food/logo (12).jpg" alt="Image 3" class="slide-image" style="display: none;" />
+                    <img src="assets/images-food/logo (14).jpg" alt="Image 4" class="slide-image" />
+                    <img src="assets/images-food/logo (15).jpg" alt="Image 5" class="slide-image" />
+                    <img src="assets/images-food/logo (1)6.jpg" alt="Image 6" class="slide-image" />
+                </div>
+                <div class="btn_slide">
+                    <button id="left">&lt;</button>  <!-- Affiche "<" -->
+                    <button id="right">&gt;</button> <!-- Affiche ">" -->
+                </div>
+                <div class="navigation-dots">
+                    <span class="dot" onclick="showImage(0)"></span>
+                    <span class="dot" onclick="showImage(1)"></span>
+                    <span class="dot" onclick="showImage(2)"></span>
+                    <span class="dot" onclick="showImage(3)"></span>
+                    <span class="dot" onclick="showImage(4)"></span>
+                    <span class="dot" onclick="showImage(5)"></span>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <section class="top-breakfast">
+        <h4>TOP BREAKFAST</h4>
+        <h2>Découvrez les Délices du Petit-Déjeuner Marocain</h2>
+        <button class="prev">&lt;</button><span>&nbsp;</span><button class="next">&gt;</button>
+        <div class="carousel">
+            <div class="cards">
+                <article class="card">
+                    <img src="assets/images-food/logo (40).jpg" alt="Msemen">
+                    <span class="price">50 DH</span>
+                    <h3>Msemen au Miel et Beurre</h3>
+                    <p>Crêpes feuilletées marocaines accompagnés d’un bon thé, parfaites pour commencer la journée.</p>
+                    <div class="rating">
+                        ⭐ 4.8 <span>(1.5k Avis)</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="assets/images-food/logo (36).jpg" alt="Baghrir">
+                    <span class="price">60 DH</span>
+                    <h3>Baghrir - Crêpes aux Mille Trous</h3>
+                    <p>Servi avec du miel et du beurre, un vrai délice marocain.</p>
+                    <div class="rating">
+                        ⭐ 4.9 <span>(2.1k Avis)</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="iassets/images-food/oeuf.jpg" alt="Khlii et Oeufs">
+                    <span class="price">35 DH</span>
+                    <h3>Œufs au Khlii</h3>
+                    <p>Viande séchée marocaine avec œufs, un plat riche en saveurs.</p>
+                    <div class="rating">
+                        ⭐ 4.7 <span>(2.3k Avis)</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="assets/images-food/logo (9).jpg" alt="cocktail">
+                    <span class="price">70DH</span>
+                    <h3>L3waser lmlah</h3>
+                    <p>Cocktails sans alcool (mocktails) qui vous évitent les gueules .</p>
+                    <div class="rating">
+                        ⭐ 4.7 <span>(3k Avis)</span>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+    </section>   
+    <!-- Lier le fichier JavaScript -->
+    <script src="food.js"></script>
+</body>
+</html>
