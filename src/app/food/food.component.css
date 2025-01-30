@@ -51,7 +51,7 @@
     transition: color 0.3s ease;
 }
 
-#homepage {
+#foodpage {
     color: #ff6f61;
 }
 
@@ -120,8 +120,8 @@
 }
 
 .description h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-family: 'playfair';
+    font-size: 36px;
     font-weight: bold;
     color: #a33d00; 
     text-transform: uppercase;
@@ -328,7 +328,7 @@
 
 .rating {
     display: flex;
-    align-items: center;
+    align-items:end;
     justify-content: center;
     font-size: 14px;
     color: #444;
