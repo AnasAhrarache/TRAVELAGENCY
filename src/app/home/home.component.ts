@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // Import RouterModule
 
 interface TripLocation {
   id: number;
@@ -14,9 +15,9 @@ interface TripLocation {
 @Component({
   selector: 'app-home',
   standalone: true, // Mark as a standalone component
-  imports: [CommonModule], 
+  imports: [CommonModule, RouterModule], // Add RouterModule here
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
   booking = {

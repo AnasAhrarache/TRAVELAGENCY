@@ -6,9 +6,9 @@
         </div>
         
         <ul class="nav-links">
-          <li><a href="#" id="homepage">Home</a></li>
-          <li><a href="#">Explore</a></li>
-          <li><a [routerLink]="['/food']">Go to Food Component</a></li>
+          <li><a [routerLink]="['/']" id="homepage">Home</a></li>
+          <li><a [routerLink]="['/food']">Food</a></li>
+          <li><a href="#">Travel</a></li>
           <li><a href="#">Blog</a></li>
         </ul>
         <div class="auth-buttons">
@@ -138,11 +138,12 @@
 <div class="containertrip">
   <div class="headertrip">
     <h1 class="h1trip">Food Tour</h1>
+    <hr id="orangelinefoodtour">
     <p>
       A Culinary Adventure Through Morocco
     </p>
     <button class="primary-button">
-      View all trip plans
+      View all tour plans
     </button>
   </div>
 
@@ -170,5 +171,110 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="containerwhyus">
+  <div class="header">
+    <h1>Why People Travel With SAFFR Agency</h1>
+    <p class="subtitle">It is a long established fact that a reader will be distracted by the readable content.</p>
+    <button class="contact-btn">Contact Us <span class="arrow">→</span></button>
+  </div>
+  
+  <div class="features">
+    <div class="feature">
+      <div class="icon">
+        <i class="fas fa-compass"></i>
+      </div>
+      <h2>Expert Guide</h2>
+      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+    </div>
+    
+    <div class="feature">
+      <div class="icon">
+        <i class="fas fa-bus"></i> 
+      </div>
+      <h2>Comfy Vehicle</h2>
+      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+    </div>
+    
+    <div class="feature">
+      <div class="icon">
+        <i class="fas fa-headset"></i> 
+      </div>
+      <h2>Travel Support</h2>
+      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+    </div>
+    
+    <div class="feature">
+      <div class="icon">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <h2>Rare Places</h2>
+      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="gallery-container">
+  <h1 class="h1tgallery">Destination Gallery</h1>
+    <hr id="orangelinegallery">
+    <p id="Pgallery">
+      Our photo gallery on trip
+    </p>
+  <div class="photo-grid">
+      <div class="photo-item wide">
+          <img src="assets/images/thumbbig-788952.webp" alt="Trip photo 1" />
+          <div class="overlay">
+              <p>Amazing sunset in Bali</p>
+          </div>
+      </div>
+      <div class="photo-item tall" style='height: 630px;'>
+          <img src="assets/images/pexels-photo-4502967.jpeg" alt="Trip photo 2" />
+          <div class="overlay">
+              <p>Mountains of Switzerland</p>
+          </div>
+      </div>
+      <div class="photo-item"  style='height: 210px;'>
+          <img src="assets/images/14-photo-workshop-adventures-morocco.jpg" alt="Trip photo 3" />
+          <div class="overlay">
+              <p>Venice canals</p>
+          </div>
+      </div>
+      <div class="photo-item wide tall">
+          <img src="assets/images/wallpaperflare.com_wallpaper (1).jpg" alt="Trip photo 4" />
+          <div class="overlay">
+              <p>Safari adventure</p>
+          </div>
+      </div>
+      <div class="photo-item" style='height: 628px;'>
+          <img  src="assets/images/pexels-girlvsglobe86-300284270-17644052.jpg" alt="Trip photo 5" />
+          <div class="overlay">
+              <p>Paris streets</p>
+          </div>
+      </div>
+      <div class="photo-item tall" style="margin-top: 35%; height: 405px;">
+          <img src="assets/images/pexels-photo-3889826.jpeg" alt="Trip photo 6" />
+          <div class="overlay">
+              <p>Japanese temple</p>
+          </div>
+      </div>
+      <div class="photo-item wide">
+          <img src="assets/images/pexels-photo-3581916.jpeg" alt="Trip photo 7" />
+          <div class="overlay">
+              <p>Greek islands</p>
+          </div>
+      </div>
   </div>
 </div>

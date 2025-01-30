@@ -111,6 +111,7 @@
   #h11{
     font-family: 'playfair';
     font-size: 65px;
+    color:#fff;
   }
   
   .booking-form {
@@ -618,23 +619,33 @@
     font-size: 4.0rem;
     margin-bottom: 1rem;
   }
-  
+  #orangelinefoodtour{
+    width: 190px;
+    height: 3.5px;
+    background-color:#e65a50;
+    border: 0;
+    margin-left: 83.5%;
+    margin-top: -1%;
+  }
   p {
     color: #666;
     margin-bottom: 1.5rem;
     max-width: 600px;
     margin-left:50%;
+    margin-top: 1%;
   }
 }
 
 .primary-button {
   background-color: #ff6b6b;
-  color: white;
-  padding: 0.75rem 1.5rem;
+  color: rgb(255, 255, 255);
+  padding: 0.85rem 1.5rem;
+  width: 180px;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-right: 85%;
   
   &:hover {
     background-color: #ff5252;
@@ -725,4 +736,219 @@
   text-align: right;
   color: #ff6b6b;
   font-weight: 500;
+}
+
+/* -------------------------------------------------------------------*/
+
+.containerwhyus {
+  max-width: 1200px;
+  margin:  auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin-top: 4%;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.contact-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color:#d9432a;
+}
+
+.arrow {
+  font-size: 1.2rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature {
+  padding: 20px;
+}
+
+.icon {
+  background-color: #faece8;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon img {
+  width: 30px;
+  height: 30px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.feature p {
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.icon i {
+  font-size: 24px;
+  color:#de7765;  /* Match your green theme */
+}
+
+
+/* ------------------------------------------ */
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 5%;
+}
+
+.h1tgallery{
+  font-family: 'Playfair';
+  font-weight: 500;
+  font-size: 3.7rem;
+  margin-bottom: 1rem;
+}
+#orangelinegallery{
+  width: 240px;
+  height: 3.5px;
+  background-color:#e65a50;
+  border: 0;
+  margin-top: -1%;
+  }
+#Pgallery {
+  color: #666;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left:0%;
+  margin-top: 1%;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow:dense;
+  gap: 10px;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+  transform: scale(1.02);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-item.wide {
+  grid-column: span 3;
+}
+
+.photo-item.tall {
+  grid-row: span 2;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgb(226, 168, 105));
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .photo-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-auto-rows: 150px;
+      gap: 10px;
+  }
+
+  .gallery-container h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-item.wide {
+      grid-column: auto;
+  }
+
+  .photo-item.tall {
+      grid-row: auto;
+  }
 }
