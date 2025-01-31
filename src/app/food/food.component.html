@@ -12,30 +12,53 @@
             </div>
             <div class="images_slide">
                 <div class="bcq_images">
-                  <img src="assets/images-food/tajine2.jpg" alt="Image 1" class="slide-image" />
-                  <img src="assets/images-food/logo (13).jpg" alt="Image 2" class="slide-image" />
-                  <img src="assets/images-food/logo (12).jpg" alt="Image 3" class="slide-image" />
-                  <img src="assets/images-food/logo (14).jpg" alt="Image 4" class="slide-image" />
-                  <img src="assets/images-food/logo (15).jpg" alt="Image 5" class="slide-image" />
-                  <img src="assets/images-food/logo (16).jpg" alt="Image 6" class="slide-image" />
+                  <!-- Structure pour chaque slide -->
+                  <div class="slide-item active">
+                    <img src="assets/images/08-photo-workshop-adventures-laurie-cohen-morocco.jpg" alt="Tajine" class="slide-image" />
+                    <div class="content">
+                      <h3>Tour de la Street Food dans la Médina</h3>
+                      <p>Explorez les saveurs de la médina avec des plats traditionnels marocains, allant des tajines aux brochettes grillées.</p>
+                      <button class="btn">Voir plus</button>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <img src="assets/images/pexels-ali-dashti-506667798-22890025.jpg" alt="Couscous" class="slide-image" />
+                    <div class="content">
+                      <h3>Cuisine Traditionnelle Maison</h3>
+                      <p>Dégustez des plats berbères faits maison à base de semoule, légumes et viande, cuits selon des recettes traditionnelles.</p>
+                      <button class="btn">Voir plus</button>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <img src="assets/images/pexels-taryn-elliott-3889842.jpg" alt="Pastilla" class="slide-image" />
+                    <div class="content">
+                      <h3>Tour des Desserts et Sucreries</h3>
+                      <p>Découvrez les délicieux desserts marocains, y compris la pastilla sucrée-salée au pigeon et aux amandes.</p>
+                      <button class="btn">Voir plus</button>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <img src="assets/images/pexels-doraklimova-7835702.jpg" alt="Couscous" class="slide-image" />
+                    <div class="content">
+                      <h3>Souk Marocain</h3>
+                      <p>Explorez les marchés marocains et goûtez des plats traditionnels comme le couscous, accompagné de légumes et de viande.</p>
+                      <button class="btn">Voir plus</button>
+                    </div>
+                  </div>
+                  <!-- Ajoutez d'autres slides ici -->
                 </div>
-              </div>
-              <div class="slide-item">
-                <img src="assets/images/pexels-taryn-elliott-3889842.jpg" alt="Pastilla" class="slide-image" />
-                <div class="content">
-                  <h3>Tour des Desserts et Sucreries</h3>
-                  <p>Découvrez les délicieux desserts marocains, y compris la pastilla sucrée-salée au pigeon et aux amandes.</p>
-                  <button class="btn">Voir plus</button>
+                <div class="btn_slide">
+                  <button id="left" (click)="onPrevButtonClick()">&lt;</button>
+                  <button id="right" (click)="onNextButtonClick()">&gt;</button>
                 </div>
-              </div>
-              <div class="slide-item">
-                <img src="assets/images/pexels-doraklimova-7835702.jpg" alt="Couscous" class="slide-image" />
-                <div class="content">
-                  <h3>Souk Marocain</h3>
-                  <p>Explorez les marchés marocains et goûtez des plats traditionnels comme le couscous, accompagné de légumes et de viande.</p>
-                  <button class="btn">Voir plus</button>
+                <div class="navigation-dots">
+                  <span class="dot active" (click)="showSlide(0)"></span>
+                  <span class="dot" (click)="showSlide(1)"></span>
+                  <span class="dot" (click)="showSlide(2)"></span>
+                  <span class="dot" (click)="showSlide(2)"></span>
+                  <!-- Ajoutez d'autres points ici -->
                 </div>
-              </div>              
+            </div>             
         </div> 
     </div>
     <section class="top-breakfast">
