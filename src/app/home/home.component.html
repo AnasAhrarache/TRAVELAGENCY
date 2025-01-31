@@ -9,7 +9,7 @@
           <li><a [routerLink]="['/']" id="homepage">Home</a></li>
           <li><a [routerLink]="['/food']">Food</a></li>
           <li><a href="#">Travel</a></li>
-          <li><a [routerLink]="['store']" id="storee">Store</a></li>
+          <li><a href="#">Blog</a></li>
         </ul>
         <div class="auth-buttons">
           <a href="#" class="btn login">Login</a>
@@ -83,70 +83,55 @@
   </section>
   <hr id="orangeline22">
 
-  <div class="special-offer">
-    <h2 id="H2SpecialOffer">Special Offer</h2>
-    <hr id="orangeline2">
-    <p id="PSpecialOffer">Check out our special offer and discounts</p>
-      <div class="btnn">
-        <button class="nav-btnP" (click)="prevSlide()">&#8249;</button>
-        <button class="nav-btnN" (click)="nextSlide()">&#8250;</button>
+<div class="special-offer">
+  <h2 id="H2SpecialOffer">Special Offer</h2>
+  <hr id="orangeline2">
+  <p id="PSpecialOffer">Check out our special offer and discounts</p>
+  <div class="btnn">
+    <button class="nav-btnP" (click)="prevSlide()">&#8249;</button>
+    <button class="nav-btnN" (click)="nextSlide()">&#8250;</button>
+  </div>
+  <div class="cards-container">
+    <div class="card" *ngFor="let offer of offers; let i = index" [class.active]="i === currentIndex2">
+      <img [src]="offer.image" alt="{{ offer.title }}" />
+      <h3>{{ offer.title }}</h3>
+      <p>{{ offer.stars }}</p>
+      <p>{{ offer.description }}</p>
+      <div class="price-details">
+        <span>From </span>
+        <span class="prix">{{ offer.price }}dh</span>
+        <button class="detailbtn">Details</button>
       </div>
-      <div class="cards-container">
-        <div
-          class="card"
-          *ngFor="let offer of offers; let i = index"
-          [class.active]="i === currentIndex2"
-        >
-          <img [src]="offer.image" alt="{{ offer.title }}" />
-          <h3>{{ offer.title }}</h3>
-          <p>{{offer.stars}}</p>
-          <p>{{ offer.description }}</p>
-          <div class="price-details">
-            <span>From </span>
-            <span class="prix">{{ offer.price }}dh</span>
-            <button class="detailbtn">Details</button>
-          </div>
-        </div>  
     </div>
   </div>
-  
-  <hr id="orangelineee">
-
-
-  <div class="blog-header">
-    <h2 id="H2blog">Our Blog</h2>
-    <hr id="orangelineblog">
-    <p id="Pblog">An insight the incredible experience in the world</p>
-
-
-<article class="blog-post">
-    <img src="assets/images/Moroccan-Desert-Photography-Tours.jpg" class="post-image">
-    <div class="post-content">
-        <h2 class="post-title">Sahara desert</h2>
-        <h3 class="post-subtitle">Let's travel</h3>
-        <p class="post-description">The Sahara Desert in Morocco is part of the world’s largest hot desert, stretching across North Africa. In Morocco, it covers the southeastern regions, with notable areas such as Erg Chebbi near Merzouga and Erg Chigaga near M’Hamid. These regions are characterized by vast sand dunes, some reaching up to 150 meters in height. The desert’s climate is arid, with scorching days and cold nights. It is home to unique flora and fauna adapted to the harsh conditions, including acacia trees, desert foxes, and camels. The region also holds cultural significance, as it is inhabited by Berber communities who have maintained their traditional way of life. Visitors often explore the area through camel rides, 4x4 tours, and overnight stays in desert camps. The Sahara in Morocco is a vital part of the country’s tourism and cultural heritage.</p>
-        <a href="#" class="read-more">Read More</a>
-    </div>
-</article>
 </div>
 
+<hr id="orangelineee">
 
-
-
-
+<div class="blog-header">
+  <h2 id="H2blog">Our Blog</h2>
+  <hr id="orangelineblog">
+  <p id="Pblog">An insight the incredible experience in the world</p>
+  <article class="blog-post">
+    <img src="assets/images/Moroccan-Desert-Photography-Tours.jpg" class="post-image">
+    <div class="post-content">
+      <h2 class="post-title">Sahara desert</h2>
+      <h3 class="post-subtitle">Let's travel</h3>
+      <p class="post-description">
+        The Sahara Desert in Morocco is part of the world’s largest hot desert, stretching across North Africa. In Morocco, it covers the southeastern regions, with notable areas such as Erg Chebbi near Merzouga and Erg Chigaga near M’Hamid. These regions are characterized by vast sand dunes, some reaching up to 150 meters in height. The desert’s climate is arid, with scorching days and cold nights. It is home to unique flora and fauna adapted to the harsh conditions, including acacia trees, desert foxes, and camels. The region also holds cultural significance, as it is inhabited by Berber communities who have maintained their traditional way of life. Visitors often explore the area through camel rides, 4x4 tours, and overnight stays in desert camps. The Sahara in Morocco is a vital part of the country’s tourism and cultural heritage.
+      </p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  </article>
+</div>
 
 <div class="containertrip">
   <div class="headertrip">
     <h1 class="h1trip">Food Tour</h1>
     <hr id="orangelinefoodtour">
-    <p>
-      A Culinary Adventure Through Morocco
-    </p>
-    <button class="primary-button">
-      View all tour plans
-    </button>
+    <p>A Culinary Adventure Through Morocco</p>
+    <button class="primary-button">View all tour plans</button>
   </div>
-
   <div class="trip-grid">
     <div class="trip-card" *ngFor="let location of locations">
       <div class="image-container">
@@ -157,10 +142,7 @@
         <h3>{{ location.title }}</h3>
         <div class="card-footer">
           <div class="rating">
-            <svg *ngFor="let star of getRatingArray(location.rating || 0)"
-                 [class.filled]="star === 1"
-                 class="star-icon"
-                 viewBox="0 0 20 20">
+            <svg *ngFor="let star of getRatingArray(location.rating || 0)" [class.filled]="star === 1" class="star-icon" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
             </svg>
           </div>
@@ -174,19 +156,12 @@
   </div>
 </div>
 
-
-
-
-
-
-
 <div class="containerwhyus">
   <div class="header">
     <h1>Why People Travel With SAFFR Agency</h1>
     <p class="subtitle">It is a long established fact that a reader will be distracted by the readable content.</p>
     <button class="contact-btn">Contact Us <span class="arrow">→</span></button>
   </div>
-  
   <div class="features">
     <div class="feature">
       <div class="icon">
@@ -195,23 +170,20 @@
       <h2>Expert Guide</h2>
       <p>It is a long established fact that a reader will be distracted by the readable content.</p>
     </div>
-    
     <div class="feature">
       <div class="icon">
-        <i class="fas fa-bus"></i> 
+        <i class="fas fa-bus"></i>
       </div>
       <h2>Comfy Vehicle</h2>
       <p>It is a long established fact that a reader will be distracted by the readable content.</p>
     </div>
-    
     <div class="feature">
       <div class="icon">
-        <i class="fas fa-headset"></i> 
+        <i class="fas fa-headset"></i>
       </div>
       <h2>Travel Support</h2>
       <p>It is a long established fact that a reader will be distracted by the readable content.</p>
     </div>
-    
     <div class="feature">
       <div class="icon">
         <i class="fas fa-map-marker-alt"></i>
@@ -222,59 +194,52 @@
   </div>
 </div>
 
-
-
-
-
-
 <div class="gallery-container">
   <h1 class="h1tgallery">Destination Gallery</h1>
-    <hr id="orangelinegallery">
-    <p id="Pgallery">
-      Our photo gallery on trip
-    </p>
+  <hr id="orangelinegallery">
+  <p id="Pgallery">Our photo gallery on trip</p>
   <div class="photo-grid">
-      <div class="photo-item wide">
-          <img src="assets/images/thumbbig-788952.webp" alt="Trip photo 1" />
-          <div class="overlay">
-              <p>Amazing sunset in Bali</p>
-          </div>
+    <div class="photo-item wide">
+      <img src="assets/images/thumbbig-788952.webp" alt="Trip photo 1" />
+      <div class="overlay">
+        <p>Amazing sunset in Bali</p>
       </div>
-      <div class="photo-item tall" style='height: 630px;'>
-          <img src="assets/images/pexels-photo-4502967.jpeg" alt="Trip photo 2" />
-          <div class="overlay">
-              <p>Mountains of Switzerland</p>
-          </div>
+    </div>
+    <div class="photo-item tall" style="height: 630px;">
+      <img src="assets/images/pexels-photo-4502967.jpeg" alt="Trip photo 2" />
+      <div class="overlay">
+        <p>Mountains of Switzerland</p>
       </div>
-      <div class="photo-item"  style='height: 210px;'>
-          <img src="assets/images/14-photo-workshop-adventures-morocco.jpg" alt="Trip photo 3" />
-          <div class="overlay">
-              <p>Venice canals</p>
-          </div>
+    </div>
+    <div class="photo-item" style="height: 210px;">
+      <img src="assets/images/14-photo-workshop-adventures-morocco.jpg" alt="Trip photo 3" />
+      <div class="overlay">
+        <p>Venice canals</p>
       </div>
-      <div class="photo-item wide tall">
-          <img src="assets/images/wallpaperflare.com_wallpaper (1).jpg" alt="Trip photo 4" />
-          <div class="overlay">
-              <p>Safari adventure</p>
-          </div>
+    </div>
+    <div class="photo-item wide tall">
+      <img src="assets/images/wallpaperflare.com_wallpaper (1).jpg" alt="Trip photo 4" />
+      <div class="overlay">
+        <p>Safari adventure</p>
       </div>
-      <div class="photo-item" style='height: 628px;'>
-          <img  src="assets/images/pexels-girlvsglobe86-300284270-17644052.jpg" alt="Trip photo 5" />
-          <div class="overlay">
-              <p>Paris streets</p>
-          </div>
+    </div>
+    <div class="photo-item" style="height: 628px;">
+      <img src="assets/images/pexels-girlvsglobe86-300284270-17644052.jpg" alt="Trip photo 5" />
+      <div class="overlay">
+        <p>Paris streets</p>
       </div>
-      <div class="photo-item tall" style="margin-top: 35%; height: 405px;">
-          <img src="assets/images/pexels-photo-3889826.jpeg" alt="Trip photo 6" />
-          <div class="overlay">
-              <p>Japanese temple</p>
-          </div>
+    </div>
+    <div class="photo-item tall" style="margin-top: 35%; height: 405px;">
+      <img src="assets/images/pexels-photo-3889826.jpeg" alt="Trip photo 6" />
+      <div class="overlay">
+        <p>Japanese temple</p>
       </div>
-      <div class="photo-item wide">
-          <img src="assets/images/pexels-photo-3581916.jpeg" alt="Trip photo 7" />
-          <div class="overlay">
-              <p>Greek islands</p>
-          </div>
+    </div>
+    <div class="photo-item wide">
+      <img src="assets/images/pexels-photo-3581916.jpeg" alt="Trip photo 7" />
+      <div class="overlay">
+        <p>Greek islands</p>
       </div>
+    </div>
   </div>
 </div>
