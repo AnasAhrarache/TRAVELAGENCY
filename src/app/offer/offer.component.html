@@ -1,1 +1,190 @@
-<p>offer works!</p>
+<div class="hero-section">
+    <div class="title-container">
+        <h1 class="main-title">
+            <span>Chefchaouen</span>
+        </h1>
+        <button>Reserver</button>
+    </div>
+    <div class="wave-overlay"></div>
+</div>
+<div class="tour-info">
+    <h1 class="tour-title">Le Grand Tour </h1>
+    <h2 class="tour-subtitle">Chefchaouen</h2>
+    
+    <div class="tour-details">
+        <div class="detail-item">
+            <span class="icon">📅</span>
+            <span class="text">30 JANVIER - 02 FÉVRIER 2025</span>
+        </div>
+        
+        <div class="detail-item">
+            <span class="icon">🏨</span>
+            <span class="text">HÔTEL 4 ÉTOILES</span>
+        </div>
+        
+        <div class="detail-item">
+            <span class="icon">⏱</span>
+            <span class="text">4 JOURS / 3 NUITÉES</span>
+        </div>
+        
+        <div class="detail-item">
+            <span class="icon">💰</span>
+            <span class="text">1590 DHS</span>
+        </div>
+    </div>
+</div>
+<section class="programme">
+    <h2 class="programme-title">
+        <span class="icon">📅</span> Programme
+    </h2>
+
+    <div class="programme-container">
+        <div class="jour">
+            <div class="jour-header">
+                <h3>Journée 1 : Jeudi</h3>
+            </div>
+            <div class="jour-content">
+                <div class="programme-item">
+                    <div class="time">20h30:</div>
+                    <div class="description">Départ De Rabat Depuis La Gare Rabat-Agdal.</div>
+                </div>
+                <div class="programme-item">
+                    <div class="time">22h00 :</div>
+                    <div class="description">Départ De Casablanca Depuis La Gare Casa-Voyageurs.</div>
+                </div>
+                <div class="programme-item">
+                    <div class="time"></div>
+                    <div class="description">Dîner Libre En Route</div>
+                </div>
+                <div class="programme-item">
+                    <div class="time"></div>
+                    <div class="description">Départ Vers Kasbat Aït Ben Haddou</div>
+                </div>
+            </div>
+            <div class="jour-image">
+                <img src="/assets/images/1392634.jpg" alt="Coucher de soleil sur Marrakech">
+            </div>
+        </div>
+
+        <div class="jour">
+            <div class="jour-header">
+                <h3>Journée 1 : Vendredi</h3>
+            </div>
+            <div class="jour-content">
+                <div class="programme-item">
+                    <div class="time"></div>
+                    <div class="description">Petit-Déjeuner À Aït Ben Haddou.</div>
+                </div>
+                <div class="programme-item">
+                    <div class="time"></div>
+                    <div class="description">Visite D'un Site Classé Au Patrimoine Mondial De L'UNESCO.</div>
+                </div>
+                <div class="programme-item">
+                    <div class="time"></div>
+                    <div class="description">Le Village Fortifié D'Aït Ben Haddou, Célèbre Lieu De Tournage Situé Sur L'ancienne Route Des Caravanes Entre Le Sahara Et Marrakech.</div>
+                </div>
+            </div>
+            <div class="jour-image">
+                <img src="/assets/images/1392634.jpg" alt="Kasbah Aït Ben Haddou">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reservation">
+    <h2 class="reservation-title">Réservation</h2>
+    
+    <form class="reservation-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="nom">Nom Complet <span class="required">*</span></label>
+                <input type="text" id="nom" placeholder="Nom Complet" required>
+            </div>
+            <div class="form-group">
+                <label for="cin">Numéro de CIN <span class="required">*</span></label>
+                <input type="text" id="cin" placeholder="N° Carte Identité" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="telephone">Téléphone <span class="required">*</span></label>
+                <input type="tel" id="telephone" placeholder="Téléphone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="date">Date Départ <span class="required">*</span></label>
+                <select id="date" required>
+                    <option value="30 Janvier 2025">30 Janvier 2025</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ville">Ville de Départ <span class="required">*</span></label>
+                <select id="ville" required>
+                    <option value="CASABLANCA">CASABLANCA</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="age">Votre tranche d'age ? <span class="required">*</span></label>
+                <select id="age" required>
+                    <option value="18-24 Ans">18-24 Ans</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="premier">Premier voyage avec SAFFR ? <span class="required">*</span></label>
+                <select id="premier" required>
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group full-width">
+            <label>Activités que vous souhaitez faire ?</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="activites" value="quad">
+                    Quad à Lalla Takerkoust
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="activites" value="diner">
+                    Dîner + Show à Agafay
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="activites" value="montgolfiere">
+                    Montgolfière à Marrakech
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="activites" value="studio">
+                    Visite du Studio Oscar
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="activites" value="chameau">
+                    Balade à dos de chameau
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="remarques">Autres remarques</label>
+            <textarea id="remarques" placeholder="allergie alimentaire..."></textarea>
+        </div>
+
+        <div class="form-group full-width">
+            <label class="checkbox-label">
+                <input type="checkbox" required>
+                J'ai lu et accepté les <a href="#" class="conditions-link">conditions générales</a>
+            </label>
+        </div>
+
+        <button type="submit" class="submit-btn">RÉSERVER</button>
+    </form>
+</section>
