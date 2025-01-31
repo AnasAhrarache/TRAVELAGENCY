@@ -1,100 +1,124 @@
-<body>
-    <div class="container-fluid p-0">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="assets/images-food/3-removebg-preview.png" alt="Description de l'image" />
-            </div>
-            
-            <ul class="nav-links">
-              <li><a href="#" >Home</a></li>
-              <li><a href="#" id="foodpage">Food</a></li>
-              <li><a href="#">Travel</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-            <div class="auth-buttons">
-              <a href="#" class="btn login">Login</a>
-              <a href="#" class="btn signup">Sign Up</a>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="description">
-                <h2>La Cuisine Marocaine</h2><br>
-                <p>
-                    La cuisine marocaine est un mélange riche de saveurs et d'épices. Elle est connue pour ses plats emblématiques tels que le couscous, le tajine et les pastillas. 
-                    Les ingrédients frais, les herbes aromatiques et les épices comme le cumin, le safran et le paprika sont essentiels dans la préparation des plats marocains. 
-                    La cuisine marocaine est également influencée par les traditions berbères, arabes et andalouses, ce qui en fait une expérience culinaire unique et délicieuse.
-                </p>
-            </div>
-            <div class="images_slide">
-                <div class="bcq_images">
-                  <img src="assets/images-food/tajine2.jpg" alt="Image 1" class="slide-image" />
-                  <img src="assets/images-food/logo (13).jpg" alt="Image 2" class="slide-image" />
-                  <img src="assets/images-food/logo (12).jpg" alt="Image 3" class="slide-image" />
-                  <img src="assets/images-food/logo (14).jpg" alt="Image 4" class="slide-image" />
-                  <img src="assets/images-food/logo (15).jpg" alt="Image 5" class="slide-image" />
-                  <img src="assets/images-food/logo (16).jpg" alt="Image 6" class="slide-image" />
+<div class="container-fluid p-0">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/images-food/3-removebg-preview.png" alt="Description de l'image" />
+        </div>
+        
+        <ul class="nav-links">
+          <li><a href="#" >Home</a></li>
+          <li><a href="#" id="foodpage">Food</a></li>
+          <li><a href="#">Travel</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="#" class="btn login">Login</a>
+          <a href="#" class="btn signup">Sign Up</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="description">
+            <h2>La Cuisine Marocaine</h2><br>
+            <p>
+                La cuisine marocaine est un mélange riche de saveurs et d'épices. Elle est connue pour ses plats emblématiques tels que le couscous, le tajine et les pastillas. 
+                Les ingrédients frais, les herbes aromatiques et les épices comme le cumin, le safran et le paprika sont essentiels dans la préparation des plats marocains. 
+                La cuisine marocaine est également influencée par les traditions berbères, arabes et andalouses, ce qui en fait une expérience culinaire unique et délicieuse.
+            </p>
+        </div>
+        <div class="images_slide">
+            <div class="bcq_images">
+              <!-- Structure pour chaque slide -->
+              <div class="slide-item active">
+                <img src="assets/images/08-photo-workshop-adventures-laurie-cohen-morocco.jpg" alt="Tajine" class="slide-image" />
+                <div class="content">
+                  <h3>Tour de la Street Food dans la Médina</h3>
+                  <p>Explorez les saveurs de la médina avec des plats traditionnels marocains, allant des tajines aux brochettes grillées.</p>
+                  <button class="btn">Voir plus</button>
                 </div>
-                <div class="btn_slide">
-                  <button id="left" (click)="onPrevButtonClick()">&lt;</button> <!-- Previous button -->
-                  <button id="right" (click)="onNextButtonClick()">&gt;</button> <!-- Next button -->
+              </div>
+              <div class="slide-item">
+                <img src="assets/images/pexels-ali-dashti-506667798-22890025.jpg" alt="Couscous" class="slide-image" />
+                <div class="content">
+                  <h3>Cuisine Traditionnelle Maison</h3>
+                  <p>Dégustez des plats berbères faits maison à base de semoule, légumes et viande, cuits selon des recettes traditionnelles.</p>
+                  <button class="btn">Voir plus</button>
                 </div>
-                <div class="navigation-dots">
-                  <span class="dot" (click)="showImage(0)"></span>
-                  <span class="dot" (click)="showImage(1)"></span>
-                  <span class="dot" (click)="showImage(2)"></span>
-                  <span class="dot" (click)="showImage(3)"></span>
-                  <span class="dot" (click)="showImage(4)"></span>
-                  <span class="dot" (click)="showImage(5)"></span>
+              </div>
+              <div class="slide-item">
+                <img src="assets/images/pexels-taryn-elliott-3889842.jpg" alt="Pastilla" class="slide-image" />
+                <div class="content">
+                  <h3>Tour des Desserts et Sucreries</h3>
+                  <p>Découvrez les délicieux desserts marocains, y compris la pastilla sucrée-salée au pigeon et aux amandes.</p>
+                  <button class="btn">Voir plus</button>
                 </div>
-              </div>              
-        </div> 
-    </div>
-    <section class="top-breakfast">
-        <h4>TOP BREAKFAST</h4>
-        <h2>Découvrez les Délices du Petit-Déjeuner Marocain</h2>
-        <button class="prev">&lt;</button><span>&nbsp;</span><button class="next">&gt;</button>
-        <p style="visibility: hidden;">FFFFFF</p>
-        <div class="carousel">
-            <div class="cards">
-                <article class="card">
-                    <img src="assets/images-food/logo (40).jpg" alt="Msemen">
-                    <span class="price">50 DH</span>
-                    <h3>Msemen au Miel et Beurre</h3>
-                    <p>Crêpes feuilletées marocaines accompagnés d’un bon thé, parfaites pour commencer la journée.</p>
-                    <div class="rating">
-                        ⭐ 4.8 <span>(1.5k Avis)</span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="assets/images-food/logo (36).jpg" alt="Baghrir">
-                    <span class="price">60 DH</span>
-                    <h3>Baghrir - Crêpes aux Mille Trous</h3>
-                    <p>Servi avec du miel et du beurre, un vrai délice marocain.</p>
-                    <div class="rating">
-                        ⭐ 4.9 <span>(2.1k Avis)</span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="assets/images-food/oeuf.jpg" alt="Khlii et Oeufs">
-                    <span class="price">35 DH</span>
-                    <h3>Œufs au Khlii</h3>
-                    <p>Viande séchée marocaine avec œufs, un plat riche en saveurs.</p>
-                    <div class="rating">
-                        ⭐ 4.7 <span>(2.3k Avis)</span>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="assets/images-food/logo (9).jpg" alt="cocktail">
-                    <span class="price">70DH</span>
-                    <h3>Mocktails</h3>
-                    <p>Cocktails sans alcool  qui vous évitent les gueules .</p>
-                    <div class="rating">
-                        ⭐ 4.7 <span>(3k Avis)</span>
-                    </div>
-                </article>
-                
+              </div>
+              <div class="slide-item">
+                <img src="assets/images/pexels-doraklimova-7835702.jpg" alt="Couscous" class="slide-image" />
+                <div class="content">
+                  <h3>Souk Marocain</h3>
+                  <p>Explorez les marchés marocains et goûtez des plats traditionnels comme le couscous, accompagné de légumes et de viande.</p>
+                  <button class="btn">Voir plus</button>
+                </div>
+              </div>
+              <!-- Ajoutez d'autres slides ici -->
+            </div>
+            <div class="btn_slide">
+              <button id="left" (click)="onPrevButtonClick()">&lt;</button>
+              <button id="right" (click)="onNextButtonClick()">&gt;</button>
+            </div>
+            <div class="navigation-dots">
+              <span class="dot active" (click)="showSlide(0)"></span>
+              <span class="dot" (click)="showSlide(1)"></span>
+              <span class="dot" (click)="showSlide(2)"></span>
+              <span class="dot" (click)="showSlide(2)"></span>
+              <!-- Ajoutez d'autres points ici -->
             </div>
         </div>
-    </section>   
-</body>
+</div>
+<section class="top-breakfast">
+    <h4>TOP BREAKFAST</h4>
+    <h2>Découvrez les Délices du Petit-Déjeuner Marocain</h2>
+    <button class="prev">&lt;</button><span>&nbsp;</span><button class="next">&gt;</button>
+    <p style="visibility: hidden;">FFFFFF</p>
+    <div class="carousel">
+        <div class="cards">
+            <article class="card">
+                <img src="assets/images-food/logo (40).jpg" alt="Msemen">
+                <span class="price">50 DH</span>
+                <h3>Msemen au Miel et Beurre</h3>
+                <p>Crêpes feuilletées marocaines accompagnés d’un bon thé, parfaites pour commencer la journée.</p>
+                <div class="rating">
+                    ⭐ 4.8 <span>(1.5k Avis)</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/images-food/logo (36).jpg" alt="Baghrir">
+                <span class="price">60 DH</span>
+                <h3>Baghrir - Crêpes aux Mille Trous</h3>
+                <p>Servi avec du miel et du beurre, un vrai délice marocain.</p>
+                <div class="rating">
+                    ⭐ 4.9 <span>(2.1k Avis)</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/images-food/oeuf.jpg" alt="Khlii et Oeufs">
+                <span class="price">35 DH</span>
+                <h3>Œufs au Khlii</h3>
+                <p>Viande séchée marocaine avec œufs, un plat riche en saveurs.</p>
+                <div class="rating">
+                    ⭐ 4.7 <span>(2.3k Avis)</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/images-food/logo (9).jpg" alt="cocktail">
+                <span class="price">70DH</span>
+                <h3>Mocktails</h3>
+                <p>Cocktails sans alcool  qui vous évitent les gueules .</p>
+                <div class="rating">
+                    ⭐ 4.7 <span>(3k Avis)</span>
+                </div>
+            </article>
+            
+        </div>
+    </div>
+</section>
 
