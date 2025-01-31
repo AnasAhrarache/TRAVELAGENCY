@@ -6,4 +6,5 @@ import { StoreComponent } from './store/store.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent }, // Root route for HomeComponent
   { path: 'food', component: FoodComponent },
-  { path: 'Store', component: StoreComponent },];
+  { path: 'store', component: StoreComponent },
+];

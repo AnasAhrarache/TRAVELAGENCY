@@ -30,7 +30,7 @@
 .description h2 {
     font-family: 'playfair';
     font-size: 36px;
-    font-weight: bold;
+    font-weight: 1000;
     color: #e0590a; 
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -39,9 +39,14 @@
 
 .description p {
     font-size: 18px;
+    font-weight: 700;
     color:#ffecd2;
     line-height: 1.6;
     font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.description p::selection {
+    background-color: #e0590a;
 }
 
 .description p::first-letter {
@@ -49,8 +54,6 @@
     font-weight: bold;
     color: #e0590a; 
 }
-
-
 
 .images_slide {
     position: relative;
@@ -116,8 +119,10 @@
   }
   
   .slide-item .btn:hover {
-    background-color: #e65a50;
+    background-color: #fe4d3d;
   }
+
+
   
   /* Styles pour les boutons de navigation */
   .btn_slide {

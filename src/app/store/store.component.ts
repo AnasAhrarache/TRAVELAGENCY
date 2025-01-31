@@ -16,7 +16,7 @@ export class StoreComponent {
       name: 'Eiffel Tower Replica',
       description: 'A beautiful miniature replica of the Eiffel Tower.',
       price: 25.99,
-      image: 'https://via.placeholder.com/200',
+      image: 'assets/images/pexels-photo-4502967.jpeg',
       category: 'statues'
     },
     {
@@ -24,7 +24,7 @@ export class StoreComponent {
       name: 'Statue of Liberty Figurine',
       description: 'A detailed figurine of the Statue of Liberty.',
       price: 19.99,
-      image: 'https://via.placeholder.com/200',
+      image: 'assets/images/Marrakech-Medina.jpg',
       category: 'statues'
     },
     {
@@ -32,17 +32,33 @@ export class StoreComponent {
       name: 'Taj Mahal Snow Globe',
       description: 'A mesmerizing snow globe featuring the Taj Mahal.',
       price: 29.99,
-      image: 'https://via.placeholder.com/200',
+      image: 'assets/images/pexels-ali-dashti-506667798-22890025.jpg',
       category: 'decor'
     },
     {
       id: 4,
-      name: 'Great Wall of China Poster',
-      description: 'A stunning poster of the Great Wall of China.',
-      price: 15.99,
-      image: 'https://via.placeholder.com/200',
-      category: 'posters'
-    }
+      name: 'Eiffel Tower Replica',
+      description: 'A beautiful miniature replica of the Eiffel Tower.',
+      price: 25.99,
+      image: 'assets/images/pexels-photo-4502967.jpeg',
+      category: 'statues'
+    },
+    {
+      id: 5,
+      name: 'Statue of Liberty Figurine',
+      description: 'A detailed figurine of the Statue of Liberty.',
+      price: 19.99,
+      image: 'assets/images/Marrakech-Medina.jpg',
+      category: 'statues'
+    },
+    {
+      id: 6,
+      name: 'Taj Mahal Snow Globe',
+      description: 'A mesmerizing snow globe featuring the Taj Mahal.',
+      price: 29.99,
+      image: 'assets/images/pexels-ali-dashti-506667798-22890025.jpg',
+      category: 'decor'
+    },
   ];
 
   // Filtering
