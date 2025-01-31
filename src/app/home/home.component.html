@@ -225,3 +225,59 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+<div class="testimonial-section py-5">
+  <div class="container">
+    <h1 id ='comments' class="text-center mb-5">Traveler's Experiences</h1>
+    <hr id="orangelinecomment">
+    <p class="text-center text-muted mb-5">Here some awesome feedback from our travelers</p>
+    
+    <div class="carousel" 
+         (mouseenter)="pauseSlider()" 
+         (mouseleave)="resumeSlider()">
+      <div class="carousel-inner">
+        <div class="testimonial-card" 
+             *ngFor="let testimonial of testimonials; let i = index"
+             [class.active]="i === currentSlide3">
+          <div class="testimonial-content text-center">
+            <img [src]="testimonial.image" [alt]="testimonial.name" class="testimonial-image mb-4">
+            <p class="testimonial-text mb-4">{{testimonial.feedback}}</p>
+            <div class="rating mb-3">
+              <span *ngFor="let star of [1,2,3,4,5]" class="star">⭐</span>
+            </div>
+            <h5 class="testimonial-name mb-2">{{testimonial.name}}</h5>
+            <p class="testimonial-role text-muted">{{testimonial.role}}, {{testimonial.company}}</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control prev" (click)="prevSlide3()">❮</button>
+      <button class="carousel-control next" (click)="nextSlide3()">❯</button>
+
+      <div class="carousel-indicators">
+        <button *ngFor="let _ of testimonials; let i = index" 
+                [class.active]="i === currentSlide3"
+                (click)="goToSlide(i)">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

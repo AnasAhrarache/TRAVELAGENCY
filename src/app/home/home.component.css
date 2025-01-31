@@ -857,3 +857,144 @@ h2 {
       grid-row: auto;
   }
 }
+
+
+/* ------------------------------------------------*/
+#comments{
+  font-family: 'Playfair';
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 0.1;
+  color:black;
+}
+#orangelinecomment{
+  width: 240px;
+  height: 3.5px;
+  background-color:#e65a50;
+  border: 0;
+  margin-top: -1%;
+  margin-left: 31%;
+}
+.testimonial-section {
+  
+  min-height: 80vh;
+  padding: 40px 0;
+  margin-top: 10%;
+}
+
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.testimonial-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+  background: white;
+  border-radius: 6px;
+  padding: 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+}
+
+.testimonial-name {
+  color: #333;
+  font-weight: 600;
+}
+
+.rating {
+  color: #ffd700;
+  margin-left: 40%;
+}
+
+.star {
+  margin: 0 2px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #ff6b6b;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.carousel-control:hover {
+  opacity: 0.8;
+}
+
+.carousel-control.prev {
+  left: -30px;
+}
+
+.carousel-control.next {
+  right: -30px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: -30px;
+  left: 36%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel-indicators button.active {
+  background-color: #ff6b6b;
+}
+
+
+
+/* ---------------------------------*/
+
+

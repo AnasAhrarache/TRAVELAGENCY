@@ -2,6 +2,20 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+
+
+
+
+interface Testimonial {
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  image: string;
+  feedback: string;
+  rating: number;
+}
+
 interface TripLocation {
   id: number;
   title: string;
@@ -147,4 +161,106 @@ export class HomeComponent {
   getRatingArray(rating: number): number[] {
     return Array(5).fill(0).map((_, index) => index < Math.floor(rating) ? 1 : 0);
   }
+
+
+
+
+  currentSlide3 = 0;
+  autoSlideInterval: any;
+
+  testimonials: Testimonial[] = [
+    {
+      id: 1,
+      name: 'Anas Ahrarache',
+      role: 'Accountant',
+      company: '',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John',
+      feedback: 'Hadchi zin tbarklah ',
+      rating: 5
+    },
+    {
+      id: 2,
+      name: 'Ayoub Arich',
+      role: 'Journalist',
+      company: '',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Smith',
+      feedback: 'wa3r hadchi tbarklah',
+      rating: 5
+    },
+    {
+      id: 3,
+      name: 'Hemmam Karmas',
+      role: 'Managing Director',
+      company: '',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Tamara',
+      feedback: 'Tchenchit hada',
+      rating: 5
+    }
+  ];
+
+  ngOnInit3() {
+    this.startAutoSlide();
+  }
+
+  ngOnDestroy() {
+    this.stopAutoSlide();
+  }
+
+  startAutoSlide() {
+    this.autoSlideInterval = setInterval(() => {
+      this.nextSlide();
+    }, 5000);
+  }
+
+  stopAutoSlide() {
+    if (this.autoSlideInterval) {
+      clearInterval(this.autoSlideInterval);
+    }
+  }
+
+  nextSlide3() {
+    this.currentSlide3 = (this.currentSlide3 + 1) % this.testimonials.length;
+  }
+
+  prevSlide3() {
+    this.currentSlide3 = (this.currentSlide3 - 1 + this.testimonials.length) % this.testimonials.length;
+  }
+
+  goToSlide(index: number) {
+    this.currentSlide3 = index;
+  }
+
+  pauseSlider() {
+    this.stopAutoSlide();
+  }
+
+  resumeSlider() {
+    this.startAutoSlide();
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
