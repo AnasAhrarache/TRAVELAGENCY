@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; // Import RouterModule
+import { RouterModule } from '@angular/router';
 
 interface TripLocation {
   id: number;
@@ -14,8 +14,8 @@ interface TripLocation {
 
 @Component({
   selector: 'app-home',
-  standalone: true, // Mark as a standalone component
-  imports: [CommonModule, RouterModule], // Add RouterModule here
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
@@ -27,9 +27,6 @@ export class HomeComponent {
     checkOut: ''
   };
 
-  onSubmit() {
-    console.log('Booking Data:', this.booking);
-  }
   cards = [
     { image: 'assets/images/wallpaperflare.com_wallpaper (2).jpg', name: 'lkhla', location: 'Sahara' },
     { image: 'assets/images/wallpaperflare.com_wallpaper (3).jpg', name: 'jam3 lfna', location: 'Marrakech' },
@@ -37,35 +34,30 @@ export class HomeComponent {
     { image: 'assets/images/1483304.jpg', name: 'Dakchi dyal', location: 'Fes' }
   ];
 
-  currentIndex = 0; // Index of the current card
+  currentIndex = 0;
 
-  
+  constructor(private cdr: ChangeDetectorRef) {}
 
-  // Compute the transform style based on the index
   get transformStyle() {
     return `translateX(-${this.currentIndex * 100}%)`;
   }
 
-  // Move to the next card
   nextCard() {
     if (this.currentIndex < this.cards.length - 1) {
       this.currentIndex++;
     } else {
-      // Fetch new cards if at the last card and reset currentIndex to the first new card
-      const previousLength = this.cards.length;
       this.fetchNewCards();
-  
-      // Ensure the currentIndex reflects the position of the first new card
-      this.currentIndex = previousLength; // Start from the new cards
+      this.currentIndex = this.cards.length - 4;
+      this.cdr.detectChanges();
     }
   }
 
-  // Move to the previous card
   prevCard() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
     }
   }
+
   private fetchNewCards() {
     const newCards = [
       { image: 'assets/images/wallpaperflare.com_wallpaper (2).jpg', name: 'lkhla', location: 'Sahara' },
@@ -73,57 +65,43 @@ export class HomeComponent {
       { image: 'assets/images/1392643.jpg', name: 'Hassan', location: 'Rabat' },
       { image: 'assets/images/dye-pits-morocco-ir11bjlttloy9lsk.webp', name: 'Dakchi dyal', location: 'Fes' }
     ];
-  
-    this.cards = [...this.cards, ...newCards]; // Append new cards to the existing array
+
+    this.cards = [...this.cards, ...newCards];
   }
-  
-
-
 
   offers = [
     {
       title: 'Chefchaouen',
-      description:
-        '5 nights and 4 days in a 5-star hotel, breakfast and lunch included. Very popular during the renaissance.',
+      description: '5 nights and 4 days in a 5-star hotel, breakfast and lunch included. Very popular during the renaissance.',
       price: 5500,
       image: 'assets/images/pexels-photo-3061496.jpeg',
-      stars:'🌟🌟🌟🌟'
+      stars: '🌟🌟🌟🌟'
     },
     {
       title: 'Essaouira',
-      description:
-        '5 nights and 4 days in a 5-star hotel, breakfast and lunch included. Passage through .',
+      description: '5 nights and 4 days in a 5-star hotel, breakfast and lunch included. Passage through.',
       price: 3900,
       image: 'assets/images/Essaouira-1.jpg',
-      stars:'🌟🌟🌟'
+      stars: '🌟🌟🌟'
     },
     {
       title: 'Le Palais Namaskar, Marrakech',
-      description:
-        '3 nights and 2 days in a 5-star hotel, breakfast and lunch included. Explore world-class heritage sites.',
+      description: '3 nights and 2 days in a 5-star hotel, breakfast and lunch included. Explore world-class heritage sites.',
       price: 8999,
       image: 'assets/images/1392629.jpg',
-      stars:'🌟🌟🌟🌟🌟'
+      stars: '🌟🌟🌟🌟🌟'
     }
   ];
 
   currentIndex2 = -1;
 
   nextSlide() {
-    this.currentIndex2 =
-      (this.currentIndex2 + 1) % this.offers.length;
+    this.currentIndex2 = (this.currentIndex2 + 1) % this.offers.length;
   }
 
   prevSlide() {
-    this.currentIndex2 =
-      (this.currentIndex2 - 1 + this.offers.length) %
-      this.offers.length;
+    this.currentIndex2 = (this.currentIndex2 - 1 + this.offers.length) % this.offers.length;
   }
-
-
-
-
-
 
   locations: TripLocation[] = [
     {
@@ -164,14 +142,9 @@ export class HomeComponent {
     }
   ];
 
-  constructor() {}
-
   ngOnInit(): void {}
 
   getRatingArray(rating: number): number[] {
     return Array(5).fill(0).map((_, index) => index < Math.floor(rating) ? 1 : 0);
   }
 }
-
-
-  

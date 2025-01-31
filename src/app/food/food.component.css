@@ -1,98 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 
 .container-fluid {
     height: 100vh;
     background: url('/assets/images-food/logo (1).jpg') no-repeat center center/cover;
     position: relative;
 }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: transparent; /* Transparent background */
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo img {
-    z-index: 5;
-    height: 200px ;
-    width: 200px;
-    position: absolute;
-    top: -2.5rem;
-    left: 5rem;
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-  }
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    margin-left: 20%;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-#foodpage {
-    color: #ff6f61;
-}
-
-.nav-links li a:hover {
-    color: #ff6f61; 
-}
-
-.auth-buttons {
-    display: flex;
-    gap: 15px;
-    margin-right: 6%;
-}
-
-.btn {
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.login {
-    color: #fff;
-}
-
-.login:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-.signup {
-    background-color: #ff6f61;
-    color: #fff;
-    border: 2px solid #ff6f61;
-}
-
-.signup:hover {
-    background-color: #e65a50;
-    border-color: #e65a50;
-}
-
 .container {
     display: flex; 
     flex-direction: row; 

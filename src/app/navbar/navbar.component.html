@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="logo">
+      <img src="assets/images/3-removebg-preview.png">
+  </div>
+  
+  <ul class="nav-links">
+    <li><a [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a [routerLink]="['/food']" routerLinkActive="active-link">Food</a></li>
+    <li><a href="#">Travel</a></li>
+    <li><a [routerLink]="['/Store']" routerLinkActive="active-link">Store</a></li>
+  </ul>
+  <div class="auth-buttons">
+    <a href="#" class="btn login">Login</a>
+    <a href="#" class="btn signup">Sign Up</a>
+  </div>
+</nav>
