@@ -1,266 +1,261 @@
 <div class="container-fluid p-0">
 
     
-    <div class="hero position-relative text-white">
-      <div class="overlay position-absolute w-100 h-100"></div>
-      <div class="content position-absolute " >
-        <h1 id="h11">Start your unforgettable journey with us.</h1>
-        <p id="p1">The best travel for your journey begins now</p>
-      </div>
-    </div>
-  
-    <!-- Booking Form -->
-    <div class="booking-form container bg-white shadow p-4 rounded">
-      <form>
-        <div class="row">
-          <div class="col-md-3">
-            <label for="destination">Destination</label>
-            <input type="text" id="destination" class="form-control" placeholder="Destination" />
-          </div>
-          <div class="col-md-2" id="personinput">
-            <label for="persons">Person</label>
-            <select id="persons" class="form-control">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="col-md-3">
-            <label for="checkin">Check In</label>
-            <input type="date" id="checkin" class="form-control" />
-          </div>
-          <div class="col-md-3">
-            <label for="checkout">Check Out</label>
-            <input type="date" id="checkout" class="form-control" />
-          </div>
-          <div class="col-md-1 d-flex align-items-end">
-            <!-- From Uiverse.io by cssbuttons-io --> 
-<button class="booknowbtn">
-    <span class="transition"></span>
-    <span class="label">BOOK NOW</span>
-  </button>
-  
-          </div>
-        </div>
-      </form>
+  <div class="hero position-relative text-white">
+    <div class="overlay position-absolute w-100 h-100"></div>
+    <div class="content position-absolute " >
+      <h1 id="h11">Start your unforgettable journey with us.</h1>
+      <p id="p1">The best travel for your journey begins now</p>
     </div>
   </div>
-  <section class="popular-destinations">
-    <h2 id="H2populardest">Popular Destinations</h2>
-    <hr id="orangeline">
-    <p id="Ppopulardest">Most popular destinations around the world, from historical places to natural wonders.</p>
-    <div class="navigation-buttons">
-      <button class="prev-button" (click)="prevCard()">&lt;</button>
-      <button class="next-button" (click)="nextCard()">&gt;</button>
-    </div>
-    <div class="destination-cards" [style.transform]="transformStyle">
-      <div class="destination-card" *ngFor="let card of cards">
-        <img [src]="card.image" alt="{{ card.name }}">
-        <h3>{{ card.name }}</h3>
-        <p>🔻 {{ card.location }}</p>
+
+  <!-- Booking Form -->
+  <div class="booking-form container bg-white shadow p-4 rounded">
+    <form>
+      <div class="row">
+        <div class="col-md-3">
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" class="form-control" placeholder="Destination" />
+        </div>
+        <div class="col-md-2" id="personinput">
+          <label for="persons">Person</label>
+          <select id="persons" class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="checkin">Check In</label>
+          <input type="date" id="checkin" class="form-control" />
+        </div>
+        <div class="col-md-3">
+          <label for="checkout">Check Out</label>
+          <input type="date" id="checkout" class="form-control" />
+        </div>
+        <div class="col-md-1 d-flex align-items-end">
+          <!-- From Uiverse.io by cssbuttons-io --> 
+<button class="booknowbtn">
+  <span class="transition"></span>
+  <span class="label">BOOK NOW</span>
+</button>
+
+        </div>
       </div>
+    </form>
+  </div>
+</div>
+<section class="popular-destinations">
+  <h2 id="H2populardest">Popular Destinations</h2>
+  <hr id="orangeline">
+  <p id="Ppopulardest">Most popular destinations around the world, from historical places to natural wonders.</p>
+  <div class="banner">
+    <div class="slider" style="--quantity: 10">
+        <div class="item" style="--position: 1"><img src="assets/images/1392629.jpg"></div>
+        <div class="item" style="--position: 2"><img src="assets/images/1392643.jpg"></div>
+        <div class="item" style="--position: 3"><img src="assets/images/1483304.jpg"></div>
+        <div class="item" style="--position: 4"><img src="assets/images/pexels-photo-1722206.jpeg"></div>
+        <div class="item" style="--position: 5"><img src="assets/images/Moroccan-Desert-Photography-Tours.jpg"></div>
+        <div class="item" style="--position: 6"><img src="assets/images/morocco-1463212_1920.jpg"></div>
+        <div class="item" style="--position: 7"><img src="assets/images/pexels-photo-3581916.jpeg"></div>
+        <div class="item" style="--position: 8"><img src="assets/images/pexels-photo-4652131.jpeg"></div>
+        <div class="item" style="--position: 9"><img src="assets/images/pexels-photo-3889826.jpeg"></div>
+        <div class="item" style="--position: 10"><img src="assets/images/pexels-photo-3061496.jpeg"></div>
     </div>
-  </section>
-  <hr id="orangeline22">
+    <div class="content">
+        <div class="model"></div>
+    </div>
+</div>
+</section>
+
+
+
 
 <div class="special-offer">
-  <h2 id="H2SpecialOffer">Special Offer</h2>
-  <hr id="orangeline2">
-  <p id="PSpecialOffer">Check out our special offer and discounts</p>
-  <div class="btnn">
-    <button class="nav-btnP" (click)="prevSlide()">&#8249;</button>
-    <button class="nav-btnN" (click)="nextSlide()">&#8250;</button>
-  </div>
-  <div class="cards-container">
-    <div class="card" *ngFor="let offer of offers; let i = index" [class.active]="i === currentIndex2">
-      <img [src]="offer.image" alt="{{ offer.title }}" />
-      <h3>{{ offer.title }}</h3>
-      <p>{{ offer.stars }}</p>
-      <p>{{ offer.description }}</p>
-      <div class="price-details">
-        <span>From </span>
-        <span class="prix">{{ offer.price }}dh</span>
-        <button class="detailbtn">Details</button>
-      </div>
+<h2 id="H2SpecialOffer">Special Offer</h2>
+<hr id="orangeline2">
+<p id="PSpecialOffer">Check out our special offer and discounts</p>
+<div class="btnn">
+  <button class="primary-button">View all offers</button>
+</div>
+<div class="cards-container">
+  <div class="card" *ngFor="let offer of offers; let i = index" [class.active]="i === currentIndex2">
+    <img [src]="offer.image" alt="{{ offer.title }}" />
+    <h3>{{ offer.title }}</h3>
+    <p>{{ offer.stars }}</p>
+    <p>{{ offer.description }}</p>
+    <div class="price-details">
+      <span>From </span>
+      <span class="prix">{{ offer.price }}dh</span>
+      <button class="detailbtn">Details</button>
     </div>
   </div>
+</div>
 </div>
 
 <hr id="orangelineee">
 
 <div class="blog-header">
-  <h2 id="H2blog">Our Blog</h2>
-  <hr id="orangelineblog">
-  <p id="Pblog">An insight the incredible experience in the world</p>
-  <article class="blog-post">
-    <img src="assets/images/Moroccan-Desert-Photography-Tours.jpg" class="post-image">
-    <div class="post-content">
-      <h2 class="post-title">Sahara desert</h2>
-      <h3 class="post-subtitle">Let's travel</h3>
-      <p class="post-description">
-        The Sahara Desert in Morocco is part of the world’s largest hot desert, stretching across North Africa. In Morocco, it covers the southeastern regions, with notable areas such as Erg Chebbi near Merzouga and Erg Chigaga near M’Hamid. These regions are characterized by vast sand dunes, some reaching up to 150 meters in height. The desert’s climate is arid, with scorching days and cold nights. It is home to unique flora and fauna adapted to the harsh conditions, including acacia trees, desert foxes, and camels. The region also holds cultural significance, as it is inhabited by Berber communities who have maintained their traditional way of life. Visitors often explore the area through camel rides, 4x4 tours, and overnight stays in desert camps. The Sahara in Morocco is a vital part of the country’s tourism and cultural heritage.
-      </p>
-      <a href="#" class="read-more">Read More</a>
-    </div>
-  </article>
+<h2 id="H2blog">Our Blog</h2>
+<hr id="orangelineblog">
+<p id="Pblog">An insight the incredible experience in the world</p>
+<article class="blog-post">
+  <img src="assets/images/Moroccan-Desert-Photography-Tours.jpg" class="post-image">
+  <div class="post-content">
+    <h2 class="post-title">Sahara desert</h2>
+    <h3 class="post-subtitle">Let's travel</h3>
+    <p class="post-description">
+      The Sahara Desert in Morocco is part of the world’s largest hot desert, stretching across North Africa. In Morocco, it covers the southeastern regions, with notable areas such as Erg Chebbi near Merzouga and Erg Chigaga near M’Hamid. These regions are characterized by vast sand dunes, some reaching up to 150 meters in height. The desert’s climate is arid, with scorching days and cold nights. It is home to unique flora and fauna adapted to the harsh conditions, including acacia trees, desert foxes, and camels. The region also holds cultural significance, as it is inhabited by Berber communities who have maintained their traditional way of life. Visitors often explore the area through camel rides, 4x4 tours, and overnight stays in desert camps. The Sahara in Morocco is a vital part of the country’s tourism and cultural heritage.
+    </p>
+    <a href="#" class="read-more">Read More</a>
+  </div>
+</article>
 </div>
 
-<div class="containertrip">
-  <div class="headertrip">
-    <h1 class="h1trip">Food Tour</h1>
-    <hr id="orangelinefoodtour">
-    <p>A Culinary Adventure Through Morocco</p>
-    <button class="primary-button">View all tour plans</button>
-  </div>
-  <div class="trip-grid">
-    <div class="trip-card" *ngFor="let location of locations">
-      <div class="image-container">
-        <img [src]="location.image" [alt]="location.title">
-      </div>
-      <div class="card-content">
-        <span class="tour-type" *ngIf="location.type">{{ location.type }}</span>
-        <h3>{{ location.title }}</h3>
-        <div class="card-footer">
-          <span class="duration">{{ location.duration }}</span>
-        </div>
-        <div class="price" *ngIf="location.price">
-          {{ location.price }}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <div class="containerwhyus">
-  <div class="header">
-    <h1>Why People Travel With SAFFR Agency</h1>
-    <p class="subtitle">It is a long established fact that a reader will be distracted by the readable content.</p>
-    <button class="contact-btn">Contact Us <span class="arrow">→</span></button>
+<div class="header">
+  <h1>Why People Travel With SAFFR Agency</h1>
+  <p class="subtitle">It is a long established fact that a reader will be distracted by the readable content.</p>
+  <button class="contact-btn">Contact Us <span class="arrow">→</span></button>
+</div>
+<div class="features">
+  <div class="feature">
+    <div class="icon">
+      <i class="fas fa-compass"></i>
+    </div>
+    <h2>Expert Guide</h2>
+    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
   </div>
-  <div class="features">
-    <div class="feature">
-      <div class="icon">
-        <i class="fas fa-compass"></i>
-      </div>
-      <h2>Expert Guide</h2>
-      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+  <div class="feature">
+    <div class="icon">
+      <i class="fas fa-bus"></i>
     </div>
-    <div class="feature">
-      <div class="icon">
-        <i class="fas fa-bus"></i>
-      </div>
-      <h2>Comfy Vehicle</h2>
-      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">
-        <i class="fas fa-headset"></i>
-      </div>
-      <h2>Travel Support</h2>
-      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">
-        <i class="fas fa-map-marker-alt"></i>
-      </div>
-      <h2>Rare Places</h2>
-      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-    </div>
+    <h2>Comfy Vehicle</h2>
+    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
   </div>
+  <div class="feature">
+    <div class="icon">
+      <i class="fas fa-headset"></i>
+    </div>
+    <h2>Travel Support</h2>
+    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+  </div>
+  <div class="feature">
+    <div class="icon">
+      <i class="fas fa-map-marker-alt"></i>
+    </div>
+    <h2>Rare Places</h2>
+    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+  </div>
+</div>
 </div>
 
 <div class="gallery-container">
-  <h1 class="h1tgallery">Destination Gallery</h1>
-  <hr id="orangelinegallery">
-  <p id="Pgallery">Our photo gallery on trip</p>
-  <div class="photo-grid">
-    <div class="photo-item wide">
-      <img src="assets/images/thumbbig-788952.webp" alt="Trip photo 1" />
-      <div class="overlay">
-        <p>Amazing sunset in Bali</p>
-      </div>
+<h1 class="h1tgallery">Destination Gallery</h1>
+<hr id="orangelinegallery">
+<p id="Pgallery">Our photo gallery on trip</p>
+<div class="photo-grid">
+  <div class="photo-item wide">
+    <img src="assets/images/thumbbig-788952.webp" alt="Trip photo 1" />
+    <div class="overlay">
+      <p>Amazing sunset in Bali</p>
     </div>
-    <div class="photo-item tall" style="height: 630px;">
-      <img src="assets/images/pexels-photo-4502967.jpeg" alt="Trip photo 2" />
-      <div class="overlay">
-        <p>Mountains of Switzerland</p>
-      </div>
+  </div>
+  <div class="photo-item tall" style="height: 630px;">
+    <img src="assets/images/pexels-photo-4502967.jpeg" alt="Trip photo 2" />
+    <div class="overlay">
+      <p>Mountains of Switzerland</p>
     </div>
-    <div class="photo-item" style="height: 210px;">
-      <img src="assets/images/14-photo-workshop-adventures-morocco.jpg" alt="Trip photo 3" />
-      <div class="overlay">
-        <p>Venice canals</p>
-      </div>
+  </div>
+  <div class="photo-item" style="height: 210px;">
+    <img src="assets/images/14-photo-workshop-adventures-morocco.jpg" alt="Trip photo 3" />
+    <div class="overlay">
+      <p>Venice canals</p>
     </div>
-    <div class="photo-item wide tall">
-      <img src="assets/images/wallpaperflare.com_wallpaper (1).jpg" alt="Trip photo 4" />
-      <div class="overlay">
-        <p>Safari adventure</p>
-      </div>
+  </div>
+  <div class="photo-item wide tall">
+    <img src="assets/images/wallpaperflare.com_wallpaper (1).jpg" alt="Trip photo 4" />
+    <div class="overlay">
+      <p>Safari adventure</p>
     </div>
-    <div class="photo-item" style="height: 628px;">
-      <img src="assets/images/pexels-girlvsglobe86-300284270-17644052.jpg" alt="Trip photo 5" />
-      <div class="overlay">
-        <p>Paris streets</p>
-      </div>
+  </div>
+  <div class="photo-item" style="height: 628px;">
+    <img src="assets/images/pexels-girlvsglobe86-300284270-17644052.jpg" alt="Trip photo 5" />
+    <div class="overlay">
+      <p>Paris streets</p>
     </div>
-    <div class="photo-item tall" style="margin-top: 35%; height: 405px;">
-      <img src="assets/images/pexels-photo-3889826.jpeg" alt="Trip photo 6" />
-      <div class="overlay">
-        <p>Japanese temple</p>
-      </div>
+  </div>
+  <div class="photo-item tall" style="margin-top: 35%; height: 405px;">
+    <img src="assets/images/pexels-photo-3889826.jpeg" alt="Trip photo 6" />
+    <div class="overlay">
+      <p>Japanese temple</p>
     </div>
-    <div class="photo-item wide">
-      <img src="assets/images/pexels-photo-3581916.jpeg" alt="Trip photo 7" />
-      <div class="overlay">
-        <p>Greek islands</p>
-      </div>
+  </div>
+  <div class="photo-item wide">
+    <img src="assets/images/pexels-photo-3581916.jpeg" alt="Trip photo 7" />
+    <div class="overlay">
+      <p>Greek islands</p>
     </div>
   </div>
 </div>
+</div>
 
+
+
+<h1 class="h1video">Explore Morocco's Timeless Beauty</h1>
+<hr id="orangelinevideo">
+<div class="container-3 position-relative">
+<video 
+  class="video-custom rounded shadow-lg" 
+  src="assets/images/Morocco 8K HDR 60FPS (FUHD).mp4" 
+  muted  
+  controls
+></video>
+</div>
 
 
 
 
 <div class="testimonial-section py-5">
-  <div class="container">
-    <h1 id ='comments' class="text-center mb-5">Traveler's Experiences</h1>
-    <hr id="orangelinecomment">
-    <p class="text-center text-muted mb-5">Here some awesome feedback from our travelers</p>
-    
-    <div class="carousel" 
-         (mouseenter)="pauseSlider()" 
-         (mouseleave)="resumeSlider()">
-      <div class="carousel-inner">
-        <div class="testimonial-card" 
-             *ngFor="let testimonial of testimonials; let i = index"
-             [class.active]="i === currentSlide3">
-          <div class="testimonial-content text-center">
-            <img [src]="testimonial.image" [alt]="testimonial.name" class="testimonial-image mb-4">
-            <p class="testimonial-text mb-4">{{testimonial.feedback}}</p>
-            <div class="rating mb-3">
-              <span *ngFor="let star of [1,2,3,4,5]" class="star">⭐</span>
-            </div>
-            <h5 class="testimonial-name mb-2">{{testimonial.name}}</h5>
-            <p class="testimonial-role text-muted">{{testimonial.role}}, {{testimonial.company}}</p>
+<div class="container">
+  <h1 id ='comments' class="text-center mb-5">Traveler's Experiences</h1>
+  <hr id="orangelinecomment">
+  <p class="text-center text-muted mb-5">Here some awesome feedback from our travelers</p>
+  
+  <div class="carousel" 
+       (mouseenter)="pauseSlider()" 
+       (mouseleave)="resumeSlider()">
+    <div class="carousel-inner">
+      <div class="testimonial-card" 
+           *ngFor="let testimonial of testimonials; let i = index"
+           [class.active]="i === currentSlide3">
+        <div class="testimonial-content text-center">
+          <img [src]="testimonial.image" [alt]="testimonial.name" class="testimonial-image mb-4">
+          <p class="testimonial-text mb-4">{{testimonial.feedback}}</p>
+          <div class="rating mb-3">
+            <span *ngFor="let star of [1,2,3,4,5]" class="star">⭐</span>
           </div>
+          <h5 class="testimonial-name mb-2">{{testimonial.name}}</h5>
+          <p class="testimonial-role text-muted">{{testimonial.role}}, {{testimonial.company}}</p>
         </div>
       </div>
+    </div>
 
-      <button class="carousel-control prev" (click)="prevSlide3()">❮</button>
-      <button class="carousel-control next" (click)="nextSlide3()">❯</button>
+    <button class="carousel-control prev" (click)="prevSlide3()">❮</button>
+    <button class="carousel-control next" (click)="nextSlide3()">❯</button>
 
-      <div class="carousel-indicators">
-        <button *ngFor="let _ of testimonials; let i = index" 
-                [class.active]="i === currentSlide3"
-                (click)="goToSlide(i)">
-        </button>
-      </div>
+    <div class="carousel-indicators">
+      <button *ngFor="let _ of testimonials; let i = index" 
+              [class.active]="i === currentSlide3"
+              (click)="goToSlide(i)">
+      </button>
     </div>
   </div>
+</div>
 </div>
 
 
