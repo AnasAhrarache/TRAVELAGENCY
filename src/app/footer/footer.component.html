@@ -1,41 +1,58 @@
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="assets/images/3-removebg-preview.png">
-        </div>
-        
-        <div class="footer-contact">
-            <h3>Contact</h3>
-            <p><a href="mailto:contact@travelagnecy.ma">travelagency.ma</a></p>
-            <p>+212 615193902</p>
+<footer class="footer bg-dark text-white pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Footer Logo -->
+            <div class="col-md-3 text-center text-md-start">
+                <div class="footer-logo mb-3">
+                    <img src="assets/images/3-removebg-preview.png" alt="Logo" class="img-fluid" style="max-width: 280px;">
+                </div>
+            </div>
+
+            <!-- Footer Contact -->
+            <div class="col-md-3 text-center text-md-start">
+                <h5 class="text-warning mb-3">Contact</h5>
+                <p><a href="mailto:contact@travelagency.ma" class="text-white text-decoration-none">travelagency.ma</a></p>
+                <p class="text-white">+212 615193902</p>
+            </div>
+
+            <!-- Footer Menu -->
+            <div class="col-md-3 text-center text-md-start">
+                <h5 class="text-warning mb-3">Menu</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a [routerLink]="['/']" class="text-white text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a [routerLink]="['/food']" class="text-white text-decoration-none">Food</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Travel</a></li>
+                    <li class="mb-2"><a [routerLink]="['/Store']" class="text-white text-decoration-none">Store</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Social -->
+            <div class="col-md-3 text-center text-md-start">
+                <h5 class="text-warning mb-3">Follow Us</h5>
+                <div class="social-icons d-flex justify-content-center justify-content-md-start gap-3">
+                    <a href="#" class="social-icon text-white text-decoration-none fs-5">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon text-white text-decoration-none fs-5">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon text-white text-decoration-none fs-5">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-menu">
-            <h3>Menu</h3>
-            <ul>
-                <li><a [routerLink]="['/']" >Home</a></li>
-                <li><a [routerLink]="['/food']" >Food</a></li>
-                <li><a href="#">Travel</a></li>
-                <li><a [routerLink]="['/Store']" >Store</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-social">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#" class="social-icon facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-icon youtube">
-                    <i class="fab fa-youtube"></i>
-                </a>
+        <!-- Footer Bottom -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <p class="text-muted mb-0">&copy; 2023 Travel Agency. All rights reserved.</p>
             </div>
         </div>
     </div>
 </footer>
 
-<!-- Ajoutez le lien vers Font Awesome pour les icônes sociales -->
+<!-- Bootstrap 5 JS and Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

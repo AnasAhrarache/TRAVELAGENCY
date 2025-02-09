@@ -1,87 +1,72 @@
+/* Custom Footer Styling */
 .footer {
-    background: #1a1a1a;
-    color: white;
-    padding: 50px 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    padding: 0 20px;
+    background: linear-gradient(135deg, #282829, #383f46);
+   
 }
 
 .footer-logo img {
-    max-width: 150px;
-}
-
-.footer h3 {
-    color: white;
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.footer-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-menu li {
-    margin-bottom: 10px;
-}
-
-.footer-menu a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-menu a:hover {
-    color: #e65a50;
-}
-
-.footer-contact a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-contact p {
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon {
-    width: 35px;
-    height: 35px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1a1a1a;
-    text-decoration: none;
+    filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
+    margin-top: -19%;
+    margin-left: -11%;
 }
 
-.social-icon:hover {
-    transform: translateY(-3px);
-    color: red;
+.footer-logo img:hover {
+    transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
+.footer h5 {
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.footer h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50%;
+    height: 2px;
+    background: #e65a50;
+    transition: width 0.3s ease;
+}
+
+.footer h5:hover::after {
+    width: 100%;
+}
+
+.footer a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer a:hover {
+    color:#e65a50 !important;
+    transform: translateX(5px);
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    color:#e65a50 !important;
+}
+
+/* Animation for Footer Bottom */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 480px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
+.footer .row:last-child {
+    animation: fadeInUp 1s ease-in-out;
 }
