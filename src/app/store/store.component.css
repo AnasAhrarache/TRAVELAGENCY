@@ -21,28 +21,63 @@
 }
 
 
+/* General Styles */
+#allstore {
+  padding: 20px;
+}
+
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(255, 135, 83, 0.2);
-  }
-  
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .list-group-item {
-    transition: background-color 0.3s ease;
-  }
-  
-  .list-group-item:hover {
-    background-color: #f8f9fa;
-  }
-  #btnstore{
-    background-color:#e65a50;
-    border: none;
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.list-group-item {
+  transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+#btnstore {
+  background-color: #e65a50;
+  border: none;
+}
+
+#btnstore:hover {
+  background-color: #d44a40;
+}
+
+.badge {
+  font-size: 0.75rem;
+}
+
+/* Payment Form Styles */
+.payment-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-check-label {
+  font-weight: 500;
+}
+
+
+
+#pay{
+  width: 1500px;
+  margin-left: 24%;
+}
+#total{
+  font-size: 20px;
+}

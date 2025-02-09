@@ -71,7 +71,7 @@ export class StoreComponent {
   showCart = false;
 
   constructor() {}
-
+  selectedPaymentMethod: 'card' | 'paypal' = 'card';
   // Filter products by category
   filterProducts() {
     if (this.selectedCategory === 'all') {
@@ -97,4 +97,15 @@ export class StoreComponent {
   getTotal() {
     return this.cart.reduce((total, item) => total + item.price, 0);
   }
+  onSubmitPayment() {
+    alert('Card payment successful! Thank you for your purchase.');
+    this.cart = []; // Clear the cart after payment
+    this.showCart = false; // Hide the cart section
+  }
+  onPaypalPayment() {
+    alert('Redirecting to PayPal...');
+    // Add PayPal integration logic here
+    this.cart = []; // Clear the cart after payment
+    this.showCart = false; // Hide the cart section
+}
 }
