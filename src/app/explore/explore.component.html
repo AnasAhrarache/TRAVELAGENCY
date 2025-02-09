@@ -1,1 +1,54 @@
-<p>explore works!</p>
+<div class="hero position-relative text-white">
+    <div class="overlay position-absolute w-100 h-100"></div>
+    <div class="content position-absolute " >
+      <h1 id="h11">Find Your Perfect Destination in Morocco</h1>
+     
+    </div>
+  </div>
+<div class="container">
+    <h3>Answer a few questions to discover the best place for your next adventure!</h3>
+  
+    <!-- Quiz Section -->
+    <div class="quiz" id="quiz">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+  
+      <div class="question" id="question1">
+        <h3>1. What type of experience are you looking for?</h3>
+        <div class="options">
+          <label><input type="radio" name="q1" value="culture"> Cultural and Historical</label>
+          <label><input type="radio" name="q1" value="beach"> Relaxing Beach Vacation</label>
+          <label><input type="radio" name="q1" value="adventure"> Adventure and Outdoor Activities</label>
+          <label><input type="radio" name="q1" value="desert"> Desert Exploration</label>
+        </div>
+      </div>
+  
+      <div class="question" id="question2" style="display: none;">
+        <h3>2. What is your preferred climate?</h3>
+        <div class="options">
+          <label><input type="radio" name="q2" value="warm"> Warm and Sunny</label>
+          <label><input type="radio" name="q2" value="mild"> Mild and Pleasant</label>
+          <label><input type="radio" name="q2" value="hot"> Hot and Dry</label>
+        </div>
+      </div>
+  
+      <div class="question" id="question3" style="display: none;">
+        <h3>3. What is your travel budget?</h3>
+        <div class="options">
+          <label><input type="radio" name="q3" value="low"> Low Budget</label>
+          <label><input type="radio" name="q3" value="medium"> Medium Budget</label>
+          <label><input type="radio" name="q3" value="high"> High Budget</label>
+        </div>
+      </div>
+  
+      <button id="nextButton" (click)="nextQuestion()">Next</button>
+    </div>
+  
+    <!-- Result Section -->
+    <div class="result" id="result" style="display: none;">
+      <h2>Your Perfect Destination is:</h2>
+      <p id="destination"></p>
+      <img id="destinationImage" src="" alt="Destination Image">
+    </div>
+  </div>
