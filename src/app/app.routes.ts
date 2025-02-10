@@ -8,5 +8,6 @@ export const routes: Routes = [
   { path: '', component: HomeComponent }, // Root route for HomeComponent
   { path: 'explore', component: ExploreComponent },
   { path: 'Store', component: StoreComponent },
-  { path: 'Offer', component: OfferComponent },
+  { path: 'offer/:id', component: OfferComponent }
+
 ];

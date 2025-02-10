@@ -81,7 +81,7 @@
   <button class="primary-button">View all offers</button>
 </div>
 <div class="cards-container">
-  <div class="card" *ngFor="let offer of offers; let i = index" [class.active]="i === currentIndex2">
+  <div class="card" *ngFor="let offer of offers">
     <img [src]="offer.image" alt="{{ offer.title }}" />
     <h3>{{ offer.title }}</h3>
     <p>{{ offer.stars }}</p>
@@ -89,7 +89,7 @@
     <div class="price-details">
       <span>From </span>
       <span class="prix">{{ offer.price }}dh</span>
-      <button class="detailbtn">Details</button>
+      <button class="detailbtn" (click)="showdetail(offer.id)">Details</button>
     </div>
   </div>
 </div>
@@ -162,43 +162,43 @@
   <div class="photo-item wide">
     <img src="assets/images/thumbbig-788952.webp" alt="Trip photo 1" />
     <div class="overlay">
-      <p>Amazing sunset in Bali</p>
+      <p>Volubilis </p>
     </div>
   </div>
   <div class="photo-item tall" style="height: 630px;">
     <img src="assets/images/pexels-photo-4502967.jpeg" alt="Trip photo 2" />
     <div class="overlay">
-      <p>Mountains of Switzerland</p>
+      <p> Essaouira</p>
     </div>
   </div>
   <div class="photo-item" style="height: 210px;">
     <img src="assets/images/14-photo-workshop-adventures-morocco.jpg" alt="Trip photo 3" />
     <div class="overlay">
-      <p>Venice canals</p>
+      <p>Merzouga</p>
     </div>
   </div>
   <div class="photo-item wide tall">
     <img src="assets/images/wallpaperflare.com_wallpaper (1).jpg" alt="Trip photo 4" />
     <div class="overlay">
-      <p>Safari adventure</p>
+      <p>Medersa Ben Youssef</p>
     </div>
   </div>
   <div class="photo-item" style="height: 628px;">
     <img src="assets/images/pexels-girlvsglobe86-300284270-17644052.jpg" alt="Trip photo 5" />
     <div class="overlay">
-      <p>Paris streets</p>
+      <p>Chefchaouen</p>
     </div>
   </div>
   <div class="photo-item tall" style="margin-top: 35%; height: 405px;">
     <img src="assets/images/pexels-photo-3889826.jpeg" alt="Trip photo 6" />
     <div class="overlay">
-      <p>Japanese temple</p>
+      <p>Palais El Badiî</p>
     </div>
   </div>
   <div class="photo-item wide">
     <img src="assets/images/pexels-photo-3581916.jpeg" alt="Trip photo 7" />
     <div class="overlay">
-      <p>Greek islands</p>
+      <p>Ouarzazate </p>
     </div>
   </div>
 </div>

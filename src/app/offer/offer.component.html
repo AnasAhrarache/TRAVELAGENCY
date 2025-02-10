@@ -1,20 +1,18 @@
-<div class="hero-section">
-    <div class="title-container">
-        <h1 class="main-title">
-            <span>Chefchaouen</span>
-        </h1>
-        <button>Reserver</button>
+<div class="hero position-relative text-white" style="background: url('{{selectedOffer.image}}') no-repeat center center/cover;">
+    <div class="overlay position-absolute w-100 h-100"></div>
+    <div class="content position-absolute " >
+      <h1 id="h11">Treasures of Morocco: Unique Souvenirs for Every Journey</h1>
+     
     </div>
-    <div class="wave-overlay"></div>
-</div>
+  </div>
 <div class="tour-info">
     <h1 class="tour-title">Le Grand Tour </h1>
-    <h2 class="tour-subtitle">Chefchaouen</h2>
+    <h2 class="tour-subtitle">{{selectedOffer.title}}</h2>
     
     <div class="tour-details">
         <div class="detail-item">
             <span class="icon">📅</span>
-            <span class="text">30 JANVIER - 02 FÉVRIER 2025</span>
+            <span class="text">{{selectedOffer.datedepart}} - {{selectedOffer.datefin}}</span>
         </div>
         
         <div class="detail-item">
@@ -24,12 +22,12 @@
         
         <div class="detail-item">
             <span class="icon">⏱</span>
-            <span class="text">4 JOURS / 3 NUITÉES</span>
+            <span class="text">{{selectedOffer.time}}</span>
         </div>
         
         <div class="detail-item">
             <span class="icon">💰</span>
-            <span class="text">1590 DHS</span>
+            <span class="text">{{selectedOffer.price}} DH</span>
         </div>
     </div>
 </div>
@@ -38,57 +36,33 @@
         <span class="icon">📅</span> Programme
     </h2>
 
-    <div class="programme-container">
-        <div class="jour">
+    <div class="programme-container" *ngFor="let programmeGroup of selectedOffer.programmes">
+        <div *ngFor="let programme of programmeGroup">
+          <div class="jour">
             <div class="jour-header">
-                <h3>Journée 1 : Jeudi</h3>
+              <h3>Journée {{programme.idd}}</h3>
             </div>
             <div class="jour-content">
-                <div class="programme-item">
-                    <div class="time">20h30:</div>
-                    <div class="description">Départ De Rabat Depuis La Gare Rabat-Agdal.</div>
-                </div>
-                <div class="programme-item">
-                    <div class="time">22h00 :</div>
-                    <div class="description">Départ De Casablanca Depuis La Gare Casa-Voyageurs.</div>
-                </div>
-                <div class="programme-item">
-                    <div class="time"></div>
-                    <div class="description">Dîner Libre En Route</div>
-                </div>
-                <div class="programme-item">
-                    <div class="time"></div>
-                    <div class="description">Départ Vers Kasbat Aït Ben Haddou</div>
-                </div>
+              <div class="programme-item">
+                <div class="time">{{programme.time1}}:</div>
+                <div class="description">{{programme.desc1}}</div>
+              </div>
+              <div class="programme-item">
+                <div class="time">{{programme.time2}} :</div>
+                <div class="description">{{programme.desc2}}</div>
+              </div>
+              <div class="programme-item">
+                <div class="time">{{programme.time3}}</div>
+                <div class="description">{{programme.desc3}}</div>
+              </div>
             </div>
             <div class="jour-image">
-                <img src="/assets/images/1392634.jpg" alt="Coucher de soleil sur Marrakech">
+              <img src="{{programme.image}}" alt="Programme image">
             </div>
+          </div>
         </div>
-
-        <div class="jour">
-            <div class="jour-header">
-                <h3>Journée 1 : Vendredi</h3>
-            </div>
-            <div class="jour-content">
-                <div class="programme-item">
-                    <div class="time"></div>
-                    <div class="description">Petit-Déjeuner À Aït Ben Haddou.</div>
-                </div>
-                <div class="programme-item">
-                    <div class="time"></div>
-                    <div class="description">Visite D'un Site Classé Au Patrimoine Mondial De L'UNESCO.</div>
-                </div>
-                <div class="programme-item">
-                    <div class="time"></div>
-                    <div class="description">Le Village Fortifié D'Aït Ben Haddou, Célèbre Lieu De Tournage Situé Sur L'ancienne Route Des Caravanes Entre Le Sahara Et Marrakech.</div>
-                </div>
-            </div>
-            <div class="jour-image">
-                <img src="/assets/images/1392634.jpg" alt="Kasbah Aït Ben Haddou">
-            </div>
-        </div>
-    </div>
+      </div>
+      
 </section>
 <section class="reservation">
     <h2 class="reservation-title">Réservation</h2>
@@ -120,13 +94,13 @@
             <div class="form-group">
                 <label for="date">Date Départ <span class="required">*</span></label>
                 <select id="date" required>
-                    <option value="30 Janvier 2025">30 Janvier 2025</option>
+                    <option value="30 Janvier 2025">{{selectedOffer.datedepart}} 2025</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="ville">Ville de Départ <span class="required">*</span></label>
                 <select id="ville" required>
-                    <option value="CASABLANCA">CASABLANCA</option>
+                    <option value="CASABLANCA">{{selectedOffer.villedepart}}</option>
                 </select>
             </div>
         </div>

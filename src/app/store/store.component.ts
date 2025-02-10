@@ -21,26 +21,26 @@ export class StoreComponent {
     },
     {
       id: 2,
-      name: 'Statue of Liberty Figurine',
+      name: 'Blankets from Chefchaouen',
       description: 'A detailed figurine of the Statue of Liberty.',
       price: 19.99,
-      image: 'assets/images/Marrakech-Medina.jpg',
+      image: 'assets/images/raj-tent-club-raj-landscape-0238002001588073214921122760.webp',
       category: 'statues'
     },
     {
       id: 3,
-      name: 'Taj Mahal Snow Globe',
+      name: 'Berber carpets',
       description: 'A mesmerizing snow globe featuring the Taj Mahal.',
       price: 29.99,
-      image: 'assets/images/pexels-ali-dashti-506667798-22890025.jpg',
+      image: 'assets/images/1000_F_162701638_ip2pod07xMgW5z8obqhSXSOCMeXmSwa1.jpg',
       category: 'decor'
     },
     {
       id: 4,
-      name: 'Eiffel Tower Replica',
+      name: 'Thuya Wood Boxes from Essaouria',
       description: 'A beautiful miniature replica of the Eiffel Tower.',
       price: 25.99,
-      image: 'assets/images/pexels-photo-4502967.jpeg',
+      image: 'assets/images/boites-en-tuyya_9927398073_o_600x.webp',
       category: 'statues'
     },
     {
