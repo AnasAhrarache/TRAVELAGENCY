@@ -74,7 +74,7 @@ export class ExploreComponent {
     } else if (q1.value === "desert") {
       if (q2.value === "hot" && q3.value === "medium") {
         destination = "Merzouga - Experience the magic of the Sahara Desert.";
-        image = "https://via.placeholder.com/600x400?text=Merzouga";
+        image = "assets/images/Moroccan-Desert-Photography-Tours.jpg";
       } else {
         destination = "Zagora - A gateway to the desert with stunning landscapes.";
         image = "assets/images/zagora-1541152_1920.jpg";
