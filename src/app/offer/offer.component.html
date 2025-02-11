@@ -36,32 +36,23 @@
         <span class="icon">📅</span> Programme
     </h2>
 
-    <div class="programme-container" *ngFor="let programmeGroup of selectedOffer.programmes">
-        <div *ngFor="let programme of programmeGroup">
-          <div class="jour">
-            <div class="jour-header">
-              <h3>Journée {{programme.idd}}</h3>
+    <div class="programme-container" *ngFor="let programme of selectedOffer.programmes">
+        <div class="jour">
+          <div class="jour-header">
+            <h3>{{ programme.day }}</h3>
+          </div>
+          <div class="jour-content">
+            <div class="programme-item" *ngFor="let event of programme.schedule">
+              <div class="time">{{ event.time }}:</div>
+              <div class="description">{{ event.description }}</div>
             </div>
-            <div class="jour-content">
-              <div class="programme-item">
-                <div class="time">{{programme.time1}}:</div>
-                <div class="description">{{programme.desc1}}</div>
-              </div>
-              <div class="programme-item">
-                <div class="time">{{programme.time2}} :</div>
-                <div class="description">{{programme.desc2}}</div>
-              </div>
-              <div class="programme-item">
-                <div class="time">{{programme.time3}}</div>
-                <div class="description">{{programme.desc3}}</div>
-              </div>
-            </div>
-            <div class="jour-image">
-              <img src="{{programme.image}}" alt="Programme image">
-            </div>
+          </div>
+          <div class="jour-image">
+            <img [src]="programme.image" alt="Programme image">
           </div>
         </div>
       </div>
+      
       
 </section>
 <section class="reservation">

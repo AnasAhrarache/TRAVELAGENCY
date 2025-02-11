@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor,NgIf } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { DataService } from '../../data.service';
-
-
 
 
 
@@ -18,15 +16,16 @@ interface Testimonial {
 }
 
 
-
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule,NgIf, NgFor],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
+
 export class HomeComponent {
+[x: string]: any;
   booking = {
     destination: '',
     persons: 1,

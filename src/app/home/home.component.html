@@ -81,18 +81,22 @@
   <button class="primary-button">View all offers</button>
 </div>
 <div class="cards-container">
-  <div class="card" *ngFor="let offer of offers">
-    <img [src]="offer.image" alt="{{ offer.title }}" />
-    <h3>{{ offer.title }}</h3>
-    <p>{{ offer.stars }}</p>
-    <p>{{ offer.description }}</p>
-    <div class="price-details">
-      <span>From </span>
-      <span class="prix">{{ offer.price }}dh</span>
-      <button class="detailbtn" (click)="showdetail(offer.id)">Details</button>
+  <ng-container *ngFor="let offer of offers; let i = index">
+    <div class="card" *ngIf="i < 3">
+      <img [src]="offer.image" alt="{{ offer.title }}" />
+      <h3>{{ offer.title }}</h3>
+      <p>{{ offer.stars }}</p>
+      <p>{{ offer.description }}</p>
+      <div class="price-details">
+        <span>From </span>
+        <span class="prix">{{ offer.price }}dh</span>
+        <button class="detailbtn" (click)="showdetail(offer.id)">Details</button>
+      </div>
     </div>
-  </div>
+  </ng-container>
 </div>
+
+
 </div>
 
 <hr id="orangelineee">
