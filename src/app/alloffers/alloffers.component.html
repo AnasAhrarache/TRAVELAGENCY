@@ -1,0 +1,28 @@
+<div class="hero-section">
+    <h1 class="hero-title">Tous nos offres de voyage</h1>
+</div>
+
+<div class="offers-container">
+    <h2 class="section-title">Toutes nos offres de voyage</h2>
+    <div class="offers-grid">
+        <div class="offer-card" *ngFor="let offer of offers">
+            <div class="offer-layout" [routerLink]="['/offer', offer.id]">
+                <div class="offer-image-container">
+                    <img [src]="offer.image" [alt]="offer.title" class="offer-image">
+                </div>
+                <div class="offer-details">
+                    <h3 class="offer-title">{{offer.title}}</h3>
+                    <p class="stars">{{offer.stars}}</p>
+                    <p class="dates">Du {{offer.datedepart}} au {{offer.datefin}}</p>
+                    <p class="duration">{{offer.time}}</p>
+                    <p class="departure">Départ de {{offer.villedepart}}</p>
+                    <p class="description">{{offer.description}}</p>
+                    <p class="price">{{offer.price}} DH</p>
+                </div>
+            </div>
+            <div class="offer-footer">
+                <button class="details-button" [routerLink]="['/offer', offer.id]">Voir les détails</button>
+            </div>
+        </div>
+    </div>
+</div>

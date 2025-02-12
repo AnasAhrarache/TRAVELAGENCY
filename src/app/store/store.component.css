@@ -72,17 +72,12 @@
   font-weight: 500;
 }
 
-.row{
-  width: 100%;
-}
+
 
 #pay{
-  width: 50%;
+  width: 1500px;
   margin-left: 24%;
 }
 #total{
   font-size: 20px;
-}
-#payy{
-  width: 100%;
 }

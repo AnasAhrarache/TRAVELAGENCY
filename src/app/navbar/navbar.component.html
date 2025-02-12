@@ -6,11 +6,11 @@
   <ul class="nav-links">
     <li><a [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
     <li><a [routerLink]="['/explore']" routerLinkActive="active-link">Explore</a></li>
-    <li><a [routerLink]="['/Offer']" routerLinkActive="active-link">Offer</a></li>
+    <li><a [routerLink]="['/alloffers']" routerLinkActive="active-link">Offers</a></li>
     <li><a [routerLink]="['/Store']" routerLinkActive="active-link">Store</a></li>
   </ul>
   <div class="auth-buttons">
-    <a href="#" class="btn login">Login</a>
-    <a href="#" class="btn signup">Sign Up</a>
+    <a class="login" [routerLink]="['/login']" [queryParams]="{ mode: 'login' }" [ngClass]="{ 'active': isAuthMode('login') }">Login</a> 
+    <a class="signup" [routerLink]="['/login']" [queryParams]="{ mode: 'signup' }" [ngClass]="{ 'active': isAuthMode('signup') }">Signup</a> 
   </div>
 </nav>

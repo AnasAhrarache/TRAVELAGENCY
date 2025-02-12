@@ -78,11 +78,11 @@
 <hr data-aos="fade-left" data-aos-duration="2000" id="orangeline2">
 <p data-aos="fade-left" data-aos-duration="2000" id="PSpecialOffer">Check out our special offer and discounts</p>
 <div data-aos="fade-right" class="btnn">
-  <button class="primary-button">View all offers</button>
+  <button class="primary-button" [routerLink]="['/alloffers']" routerLinkActive="active-link">View all offers</button>
 </div>
 <div data-aos="fade-up" data-aos-duration="2000"  class="cards-container">
   <ng-container *ngFor="let offer of offers; let i = index">
-    <div  class="card" *ngIf="i < 3">
+    <div  class="card" *ngIf="i < 3" (click)="showdetail(offer.id)">
       <img [src]="offer.image" alt="{{ offer.title }}" />
       <h3>{{ offer.title }}</h3>
       <p>{{ offer.stars }}</p>
@@ -90,7 +90,7 @@
       <div class="price-details">
         <span>From </span>
         <span class="prix">{{ offer.price }}dh</span>
-        <button class="detailbtn" (click)="showdetail(offer.id)">Details</button>
+        <button class="detailbtn" >Details</button>
       </div>
     </div>
   </ng-container>

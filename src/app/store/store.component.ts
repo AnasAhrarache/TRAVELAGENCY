@@ -15,7 +15,7 @@ export class StoreComponent {
       id: 1,
       name: 'Eiffel Tower Replica',
       description: 'A beautiful miniature replica of the Eiffel Tower.',
-      price: 25.99,
+      price: 250.99,
       image: 'assets/images/pexels-photo-4502967.jpeg',
       category: 'statues'
     },
@@ -23,7 +23,7 @@ export class StoreComponent {
       id: 2,
       name: 'Blankets from Chefchaouen',
       description: 'A detailed figurine of the Statue of Liberty.',
-      price: 19.99,
+      price: 190.99,
       image: 'assets/images/raj-tent-club-raj-landscape-0238002001588073214921122760.webp',
       category: 'statues'
     },
@@ -31,7 +31,7 @@ export class StoreComponent {
       id: 3,
       name: 'Berber carpets',
       description: 'A mesmerizing snow globe featuring the Taj Mahal.',
-      price: 29.99,
+      price: 290.99,
       image: 'assets/images/1000_F_162701638_ip2pod07xMgW5z8obqhSXSOCMeXmSwa1.jpg',
       category: 'decor'
     },
@@ -39,7 +39,7 @@ export class StoreComponent {
       id: 4,
       name: 'Thuya Wood Boxes from Essaouria',
       description: 'A beautiful miniature replica of the Eiffel Tower.',
-      price: 25.99,
+      price: 250.99,
       image: 'assets/images/boites-en-tuyya_9927398073_o_600x.webp',
       category: 'statues'
     },
@@ -47,7 +47,7 @@ export class StoreComponent {
       id: 5,
       name: 'Statue of Liberty Figurine',
       description: 'A detailed figurine of the Statue of Liberty.',
-      price: 19.99,
+      price: 190.99,
       image: 'assets/images/Marrakech-Medina.jpg',
       category: 'statues'
     },
@@ -55,7 +55,7 @@ export class StoreComponent {
       id: 6,
       name: 'Taj Mahal Snow Globe',
       description: 'A mesmerizing snow globe featuring the Taj Mahal.',
-      price: 29.99,
+      price: 290.99,
       image: 'assets/images/pexels-ali-dashti-506667798-22890025.jpg',
       category: 'decor'
     },
