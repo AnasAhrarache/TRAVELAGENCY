@@ -4,13 +4,13 @@
   <div class="hero position-relative text-white">
     <div class="overlay position-absolute w-100 h-100"></div>
     <div class="content position-absolute " >
-      <h1 id="h11">Start your unforgettable journey with us.</h1>
-      <p id="p1">The best travel for your journey begins now</p>
+      <h1 data-aos="fade-right" data-aos-duration="2000" id="h11">Start your unforgettable journey with us.</h1>
+      <p  data-aos="fade-up-left" data-aos-duration="2000"  id="p1">The best travel for your journey begins now</p>
     </div>
   </div>
 
   <!-- Booking Form -->
-  <div class="booking-form container bg-white shadow p-4 rounded">
+  <div data-aos="fade-left" data-aos-duration="2000" class="booking-form container bg-white shadow p-4 rounded">
     <form>
       <div class="row">
         <div class="col-md-3">
@@ -48,11 +48,11 @@
   </div>
 </div>
 <section class="popular-destinations">
-  <h2 id="H2populardest">Popular Destinations</h2>
-  <hr id="orangeline">
-  <p id="Ppopulardest">Most popular destinations around the world, from historical places to natural wonders.</p>
-  <div class="banner">
-    <div class="slider" style="--quantity: 10">
+  <h2 data-aos="fade-up" data-aos-duration="2000" id="H2populardest">Popular Destinations</h2>
+  <hr data-aos="fade-up" data-aos-duration="2000" id="orangeline">
+  <p data-aos="fade-up" data-aos-duration="2000" id="Ppopulardest">Most popular destinations around the world, from historical places to natural wonders.</p>
+  <div data-aos="fade-up" data-aos-duration="2000" class="banner">
+    <div  class="slider" style="--quantity: 10">
         <div class="item" style="--position: 1"><img src="assets/images/1392629.jpg"></div>
         <div class="item" style="--position: 2"><img src="assets/images/1392643.jpg"></div>
         <div class="item" style="--position: 3"><img src="assets/images/1483304.jpg"></div>
@@ -74,15 +74,15 @@
 
 
 <div class="special-offer">
-<h2 id="H2SpecialOffer">Special Offer</h2>
-<hr id="orangeline2">
-<p id="PSpecialOffer">Check out our special offer and discounts</p>
-<div class="btnn">
+<h2 data-aos="fade-left" data-aos-duration="2000" id="H2SpecialOffer">Special Offer</h2>
+<hr data-aos="fade-left" data-aos-duration="2000" id="orangeline2">
+<p data-aos="fade-left" data-aos-duration="2000" id="PSpecialOffer">Check out our special offer and discounts</p>
+<div data-aos="fade-right" class="btnn">
   <button class="primary-button">View all offers</button>
 </div>
-<div class="cards-container">
+<div data-aos="fade-up" data-aos-duration="2000"  class="cards-container">
   <ng-container *ngFor="let offer of offers; let i = index">
-    <div class="card" *ngIf="i < 3">
+    <div  class="card" *ngIf="i < 3">
       <img [src]="offer.image" alt="{{ offer.title }}" />
       <h3>{{ offer.title }}</h3>
       <p>{{ offer.stars }}</p>
@@ -99,15 +99,15 @@
 
 </div>
 
-<hr id="orangelineee">
+<hr  id="orangelineee">
 
 <div class="blog-header">
-<h2 id="H2blog">Our Blog</h2>
-<hr id="orangelineblog">
-<p id="Pblog">An insight the incredible experience in the world</p>
+<h2 data-aos="fade-right" data-aos-duration="2000" id="H2blog">Our Blog</h2>
+<hr data-aos="fade-right" data-aos-duration="2000" id="orangelineblog">
+<p data-aos="fade-right" data-aos-duration="2000" id="Pblog">An insight the incredible experience in the world</p>
 <article class="blog-post">
-  <img src="assets/images/Moroccan-Desert-Photography-Tours.jpg" class="post-image">
-  <div class="post-content">
+  <img data-aos="fade-up" data-aos-duration="2000" src="assets/images/Moroccan-Desert-Photography-Tours.jpg" class="post-image">
+  <div data-aos="fade-left" data-aos-duration="2000" class="post-content">
     <h2 class="post-title">Sahara desert</h2>
     <h3 class="post-subtitle">Let's travel</h3>
     <p class="post-description">
@@ -162,7 +162,7 @@
 <h1 class="h1tgallery">Destination Gallery</h1>
 <hr id="orangelinegallery">
 <p id="Pgallery">Our photo gallery on trip</p>
-<div class="photo-grid">
+<div data-aos="fade-up" data-aos-duration="1000" class="photo-grid">
   <div class="photo-item wide">
     <img src="assets/images/thumbbig-788952.webp" alt="Trip photo 1" />
     <div class="overlay">

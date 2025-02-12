@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component , OnInit , AfterViewInit} from '@angular/core';
 import { CommonModule, NgFor,NgIf } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { DataService } from '../../data.service';
+import * as AOS from 'aos';
 
 
 
@@ -16,6 +17,7 @@ interface Testimonial {
 }
 
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -24,7 +26,8 @@ interface Testimonial {
   styleUrls: ['./home.component.css'],
 })
 
-export class HomeComponent {
+
+export class HomeComponent implements OnInit {
 [x: string]: any;
   booking = {
     destination: '',
@@ -39,7 +42,16 @@ export class HomeComponent {
     private router: Router  // Inject Router here
   ){}
 
+
+
+  
+  initAOS(): void {
+    AOS.init({
+    });
+  }
+
   ngOnInit(): void {
+    this.initAOS();
     this.offers = this.dataService.getoffers();
   }  
 
