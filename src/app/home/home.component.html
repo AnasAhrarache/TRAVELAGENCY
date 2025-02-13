@@ -74,9 +74,9 @@
 
 
 <div class="special-offer">
-<h2 data-aos="fade-left" data-aos-duration="2000" id="H2SpecialOffer">Special Offer</h2>
-<hr data-aos="fade-left" data-aos-duration="2000" id="orangeline2">
-<p data-aos="fade-left" data-aos-duration="2000" id="PSpecialOffer">Check out our special offer and discounts</p>
+<h2 data-aos="fade-up" id="H2SpecialOffer">Special Offer</h2>
+<hr data-aos="fade-up" id="orangeline2">
+<p data-aos="fade-up"id="PSpecialOffer">Check out our special offer and discounts</p>
 <div data-aos="fade-right" class="btnn">
   <button class="primary-button" [routerLink]="['/alloffers']" routerLinkActive="active-link">View all offers</button>
 </div>
@@ -240,11 +240,11 @@
         <div class="testimonial-content text-center">
           <img [src]="testimonial.image" [alt]="testimonial.name" class="testimonial-image mb-4">
           <p class="testimonial-text mb-4">{{testimonial.feedback}}</p>
-          <div class="rating mb-3">
+          <div id="stars" class="rating mb-3">
             <span *ngFor="let star of [1,2,3,4,5]" class="star">⭐</span>
           </div>
           <h5 class="testimonial-name mb-2">{{testimonial.name}}</h5>
-          <p class="testimonial-role text-muted">{{testimonial.role}}, {{testimonial.company}}</p>
+          <p class="testimonial-role text-muted">{{testimonial.role}} {{testimonial.company}}</p>
         </div>
       </div>
     </div>

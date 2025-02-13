@@ -5,56 +5,88 @@
      
     </div>
   </div>
-<div class="tour-info">
-    <h1 class="tour-title">Le Grand Tour </h1>
-    <h2 class="tour-subtitle">{{selectedOffer.title}}</h2>
-    
-    <div class="tour-details">
-        <div class="detail-item">
-            <span class="icon">📅</span>
-            <span class="text">{{selectedOffer.datedepart}} - {{selectedOffer.datefin}}</span>
-        </div>
-        
-        <div class="detail-item">
-            <span class="icon">🏨</span>
-            <span class="text">HÔTEL 4 ÉTOILES</span>
-        </div>
-        
-        <div class="detail-item">
-            <span class="icon">⏱</span>
-            <span class="text">{{selectedOffer.time}}</span>
-        </div>
-        
-        <div class="detail-item">
-            <span class="icon">💰</span>
-            <span class="text">{{selectedOffer.price}} DH</span>
-        </div>
+  <section class="hero text-white">
+    <div class="container hero-content">
+      <h1 class="tour-title mb-3">Le Grand Tour</h1>
+      <h2 style="margin-left: 40%;font-size: 50px; color: rgb(241, 112, 112);" class="h3 mb-4">{{selectedOffer.title}}</h2>
     </div>
-</div>
-<section class="programme">
-    <h2 class="programme-title">
-        <span class="icon">📅</span> Programme
-    </h2>
+  </section>
 
-    <div class="programme-container" *ngFor="let programme of selectedOffer.programmes">
-        <div class="jour">
-          <div class="jour-header">
-            <h3>{{ programme.day }}</h3>
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Info Card -->
+    <div class="info-card p-4 mb-5">
+      <div class="row g-4">
+        <div class="col-md-3 text-center">
+          <div class="feature-icon mx-auto">
+            <i class="fas fa-calendar-alt"></i>
           </div>
-          <div class="jour-content">
-            <div class="programme-item" *ngFor="let event of programme.schedule">
-              <div class="time">{{ event.time }}:</div>
-              <div class="description">{{ event.description }}</div>
+          <h5>Dates</h5>
+          <p class="mb-0">{{selectedOffer.datedepart}} - {{selectedOffer.datefin}}</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="feature-icon mx-auto">
+            <i class="fas fa-hotel"></i>
+          </div>
+          <h5>Hébergement</h5>
+          <p class="mb-0">HÔTEL 4 ÉTOILES</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="feature-icon mx-auto">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h5>Durée</h5>
+          <p class="mb-0">{{selectedOffer.time}}</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="feature-icon mx-auto">
+            <i class="fas fa-tag"></i>
+          </div>
+          <h5>Prix</h5>
+          <p class="mb-0">{{selectedOffer.price}} DH</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Programme Section -->
+    <section class="programme-section mb-5">
+      <h2 class="text-center mb-5">
+        <span class="badge bg-primary p-3 rounded-pill">
+          <i class="fas fa-map-marked-alt me-2" ></i>Programme
+        </span>
+      </h2>
+
+      <div class="timeline">
+        <div class="row" *ngFor="let programme of selectedOffer.programmes">
+          <div class="col-lg-8 mx-auto">
+            <div class="day-card">
+              <div class="p-4">
+                <h3 class="h4 mb-4">{{ programme.day }}</h3>
+                
+                <div class="events">
+                  <div class="event mb-3" *ngFor="let event of programme.schedule">
+                    <div class="d-flex align-items-center">
+                      <span style="color: rgb(237, 194, 87);" class="event-time me-3">{{ event.time }}</span>
+                      <div class="event-description flex-grow-1">
+                        {{ event.description }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="image-container mt-4">
+                  <img [src]="programme.image" alt="Programme image" class="img-fluid">
+                  <div class="floating-badge">
+                    <i class="fas fa-camera me-2"></i>Highlight
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="jour-image">
-            <img [src]="programme.image" alt="Programme image">
           </div>
         </div>
       </div>
-      
-      
-</section>
+    </section>
+  </div>
 <section class="reservation">
     <h2 class="reservation-title">Réservation</h2>
     

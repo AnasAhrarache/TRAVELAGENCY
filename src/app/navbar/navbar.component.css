@@ -71,13 +71,13 @@
 .auth-buttons a.login {
   background-color: transparent; 
   color: #fff; 
-  border: 2px solid #ff6f61; 
+  border: 0px solid #ff6f61; 
 }
 
 .auth-buttons a.login:hover {
-  background-color: #ff6f61; 
-  color: #fff; 
-  border-color: #ff6f61; 
+  background-color: #ffffff; 
+  color: #000000; 
+ 
 }
 
 .auth-buttons a.signup {

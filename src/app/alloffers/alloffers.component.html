@@ -1,28 +1,38 @@
 <div class="hero-section">
-    <h1 class="hero-title">Tous nos offres de voyage</h1>
+    <h1 class="title">The world is a book, and those who do not travel read only one page.</h1>
 </div>
 
 <div class="offers-container">
-    <h2 class="section-title">Toutes nos offres de voyage</h2>
-    <div class="offers-grid">
-        <div class="offer-card" *ngFor="let offer of offers">
-            <div class="offer-layout" [routerLink]="['/offer', offer.id]">
-                <div class="offer-image-container">
-                    <img [src]="offer.image" [alt]="offer.title" class="offer-image">
-                </div>
-                <div class="offer-details">
-                    <h3 class="offer-title">{{offer.title}}</h3>
-                    <p class="stars">{{offer.stars}}</p>
-                    <p class="dates">Du {{offer.datedepart}} au {{offer.datefin}}</p>
-                    <p class="duration">{{offer.time}}</p>
-                    <p class="departure">Départ de {{offer.villedepart}}</p>
-                    <p class="description">{{offer.description}}</p>
-                    <p class="price">{{offer.price}} DH</p>
-                </div>
+    <h2 class="section-title" style="font-family: 'Arial Narrow', Arial, sans-serif;">Toutes nos offres de voyage</h2>
+    <div class="offers-grid container-fluid">
+        <div class="row">
+          <!-- Loop through offers -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let offer of offers">
+            <div class="offer-card card h-100 shadow-sm">
+              <!-- Offer Image -->
+              <div class="offer-image-container">
+                <img [src]="offer.image" [alt]="offer.title" class="card-img-top offer-image">
+              </div>
+      
+              <!-- Offer Details -->
+              <div class="card-body offer-details">
+                <h3 class="card-title offer-title">{{offer.title}}</h3>
+                <p class="stars text-warning">{{offer.stars}}</p>
+                <p class="dates text-muted"><i class="fas fa-calendar-alt me-2"></i>From {{offer.datedepart}} to {{offer.datefin}}</p>
+                <p class="duration"><i class="fas fa-clock me-2"></i>{{offer.time}}</p>
+                <p class="departure"><i class="fas fa-map-marker-alt me-2"></i>Departure from {{offer.villedepart}}</p>
+                <p class="description">{{offer.description}}</p>
+                <p class="price h4 text-primary">{{offer.price}} DH</p>
+              </div>
+      
+              <!-- Footer with Details Button -->
+              <div class="card-footer offer-footer bg-transparent border-0">
+                <button class="btn btn-primary w-100 details-button" [routerLink]="['/offer', offer.id]">
+                  <i class="fas fa-info-circle me-2"></i>View Details
+                </button>
+              </div>
             </div>
-            <div class="offer-footer">
-                <button class="details-button" [routerLink]="['/offer', offer.id]">Voir les détails</button>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 </div>

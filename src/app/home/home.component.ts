@@ -93,6 +93,15 @@ export class HomeComponent implements OnInit {
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Tamara',
       feedback: 'Tchenchit hada',
       rating: 5
+    },
+    {
+      id: 3,
+      name: 'Noureddine Rguig',
+      role: 'Managing Director',
+      company: '',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Tamara',
+      feedback: 'M3a moumkine koulchi moumkine',
+      rating: 5
     }
   ];
   currentIndex2 = -1;

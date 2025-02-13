@@ -338,3 +338,114 @@ textarea {
         padding: 20px;
     }
 }
+
+
+
+
+
+
+
+:root {
+    --primary-color: #2C3E50;
+    --accent-color: #E74C3C;
+  }
+
+  body {
+    background-color: #fff;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/api/placeholder/1200/800') center/cover;
+    opacity: 0.2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .tour-title {
+    font-size: 4rem;
+    font-weight: 800;
+    background-color:rgb(83, 81, 81);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .info-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    margin-top: -100px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #f4d3af 0%, #e13c05 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  
+
+  .day-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.09);
+    margin: 2rem 0;
+    overflow: hidden;
+    transition: transform 0.1s ease;
+  }
+
+  .day-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .event-time {
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .image-container img {
+    transition: transform 0.3s ease;
+  }
+
+  .image-container:hover img {
+    transform: scale(1.02);
+  }
+
+  .floating-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+  }

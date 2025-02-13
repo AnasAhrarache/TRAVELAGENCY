@@ -13,16 +13,16 @@ export class StoreComponent {
   products = [
     {
       id: 1,
-      name: 'Eiffel Tower Replica',
-      description: 'A beautiful miniature replica of the Eiffel Tower.',
+      name: 'Cotton Tote Bag',
+      description: 'A durable and eco-friendly bag, perfect for everyday use, featuring traditional Moroccan designs.',
       price: 250.99,
-      image: 'assets/images/pexels-photo-4502967.jpeg',
+      image: 'assets/images/il_600x600.5193859488_6ux6.webp',
       category: 'statues'
     },
     {
       id: 2,
       name: 'Blankets from Chefchaouen',
-      description: 'A detailed figurine of the Statue of Liberty.',
+      description: ' Soft, handwoven blankets inspired by the iconic blue hues of Chefchaouen.',
       price: 190.99,
       image: 'assets/images/raj-tent-club-raj-landscape-0238002001588073214921122760.webp',
       category: 'statues'
@@ -30,7 +30,7 @@ export class StoreComponent {
     {
       id: 3,
       name: 'Berber carpets',
-      description: 'A mesmerizing snow globe featuring the Taj Mahal.',
+      description: 'Authentic, hand-knotted carpets showcasing vibrant Berber patterns.',
       price: 290.99,
       image: 'assets/images/1000_F_162701638_ip2pod07xMgW5z8obqhSXSOCMeXmSwa1.jpg',
       category: 'decor'
@@ -38,26 +38,26 @@ export class StoreComponent {
     {
       id: 4,
       name: 'Thuya Wood Boxes from Essaouria',
-      description: 'A beautiful miniature replica of the Eiffel Tower.',
+      description: 'Exquisite, hand-carved wooden boxes made from rare Thuya wood.',
       price: 250.99,
       image: 'assets/images/boites-en-tuyya_9927398073_o_600x.webp',
       category: 'statues'
     },
     {
       id: 5,
-      name: 'Statue of Liberty Figurine',
-      description: 'A detailed figurine of the Statue of Liberty.',
+      name: 'Key Holder',
+      description: ' stylish and functional key holder, crafted with traditional Moroccan artistry.',
       price: 190.99,
-      image: 'assets/images/Marrakech-Medina.jpg',
-      category: 'statues'
+      image: 'assets/images/il_600x600.5637448440_lxb0.webp',
+      category: 'decor'
     },
     {
       id: 6,
-      name: 'Taj Mahal Snow Globe',
-      description: 'A mesmerizing snow globe featuring the Taj Mahal.',
+      name: 'Camel Poster',
+      description: 'A decorative poster featuring camels, capturing the essence of Moroccan desert landscapes.',
       price: 290.99,
-      image: 'assets/images/pexels-ali-dashti-506667798-22890025.jpg',
-      category: 'decor'
+      image: 'assets/images/71jtZbQsskL.webp',
+      category: 'posters'
     },
   ];
 

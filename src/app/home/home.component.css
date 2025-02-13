@@ -742,6 +742,9 @@ margin-left: 40%;
 .star {
 margin: 0 2px;
 }
+#stars{
+  margin-left: -2%;
+}
 
 .carousel-control {
 position: absolute;

@@ -1,3 +1,15 @@
+.title{
+    text-align: center;
+    color: #fff;
+    font-family: 'playfair';
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 50px;
+    z-index: 2;
+}
+
+
+
 .offers-container {
     padding: 2rem;
     width: 100%;
