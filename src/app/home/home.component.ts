@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
       role: 'Accountant',
       company: '',
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John',
-      feedback: 'Hadchi zin tbarklah ',
+      feedback: 'Hadchi zwin tbarklah ',
       rating: 5
     },
     {
@@ -82,7 +82,7 @@ export class HomeComponent implements OnInit {
       role: 'Journalist',
       company: '',
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Smith',
-      feedback: 'wa3r hadchi tbarklah',
+      feedback: 'wooow',
       rating: 5
     },
     {
@@ -91,7 +91,7 @@ export class HomeComponent implements OnInit {
       role: 'Managing Director',
       company: '',
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Tamara',
-      feedback: 'Tchenchit hada',
+      feedback: 'hadchi jamil',
       rating: 5
     },
     {
@@ -100,7 +100,7 @@ export class HomeComponent implements OnInit {
       role: 'Managing Director',
       company: '',
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Tamara',
-      feedback: 'M3a moumkine koulchi moumkine',
+      feedback: 'yalaraw3a ',
       rating: 5
     }
   ];

@@ -87,25 +87,25 @@
       </div>
     </section>
   </div>
-<section class="reservation">
-    <h2 class="reservation-title">Réservation</h2>
+  <section class="reservation">
+    <h2 class="reservation-title">Reservation</h2>
     
     <form class="reservation-form">
         <div class="form-row">
             <div class="form-group">
-                <label for="nom">Nom Complet <span class="required">*</span></label>
-                <input type="text" id="nom" placeholder="Nom Complet" required>
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" placeholder="Full Name" required>
             </div>
             <div class="form-group">
-                <label for="cin">Numéro de CIN <span class="required">*</span></label>
-                <input type="text" id="cin" placeholder="N° Carte Identité" required>
+                <label for="id-number">ID Number <span class="required">*</span></label>
+                <input type="text" id="id-number" placeholder="ID Card Number" required>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group">
-                <label for="telephone">Téléphone <span class="required">*</span></label>
-                <input type="tel" id="telephone" placeholder="Téléphone" required>
+                <label for="phone">Phone <span class="required">*</span></label>
+                <input type="tel" id="phone" placeholder="Phone" required>
             </div>
             <div class="form-group">
                 <label for="email">Email <span class="required">*</span></label>
@@ -115,14 +115,14 @@
 
         <div class="form-row">
             <div class="form-group">
-                <label for="date">Date Départ <span class="required">*</span></label>
-                <select id="date" required>
-                    <option value="30 Janvier 2025">{{selectedOffer.datedepart}} 2025</option>
+                <label for="departure-date">Departure Date <span class="required">*</span></label>
+                <select id="departure-date" required>
+                    <option value="30 January 2025">{{selectedOffer.datedepart}} 2025</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="ville">Ville de Départ <span class="required">*</span></label>
-                <select id="ville" required>
+                <label for="departure-city">Departure City <span class="required">*</span></label>
+                <select id="departure-city" required>
                     <option value="CASABLANCA">{{selectedOffer.villedepart}}</option>
                 </select>
             </div>
@@ -130,58 +130,58 @@
 
         <div class="form-row">
             <div class="form-group">
-                <label for="age">Votre tranche d'age ? <span class="required">*</span></label>
+                <label for="age">Your Age Group? <span class="required">*</span></label>
                 <select id="age" required>
-                    <option value="18-24 Ans">18-24 Ans</option>
+                    <option value="18-24 Years">18-24 Years</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="premier">Premier voyage avec SAFFR ? <span class="required">*</span></label>
-                <select id="premier" required>
-                    <option value="Oui">Oui</option>
-                    <option value="Non">Non</option>
+                <label for="first-time">First Trip with SAFFR? <span class="required">*</span></label>
+                <select id="first-time" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                 </select>
             </div>
         </div>
 
         <div class="form-group full-width">
-            <label>Activités que vous souhaitez faire ?</label>
+            <label>Activities You Want to Do?</label>
             <div class="checkbox-group">
                 <label class="checkbox-label">
-                    <input type="checkbox" name="activites" value="quad">
-                    Quad à Lalla Takerkoust
+                    <input type="checkbox" name="activities" value="quad">
+                    Quad at Lalla Takerkoust
                 </label>
                 <label class="checkbox-label">
-                    <input type="checkbox" name="activites" value="diner">
-                    Dîner + Show à Agafay
+                    <input type="checkbox" name="activities" value="dinner">
+                    Dinner + Show at Agafay
                 </label>
                 <label class="checkbox-label">
-                    <input type="checkbox" name="activites" value="montgolfiere">
-                    Montgolfière à Marrakech
+                    <input type="checkbox" name="activities" value="hot-air-balloon">
+                    Hot Air Balloon in Marrakech
                 </label>
                 <label class="checkbox-label">
-                    <input type="checkbox" name="activites" value="studio">
-                    Visite du Studio Oscar
+                    <input type="checkbox" name="activities" value="studio">
+                    Visit Oscar Studio
                 </label>
                 <label class="checkbox-label">
-                    <input type="checkbox" name="activites" value="chameau">
-                    Balade à dos de chameau
+                    <input type="checkbox" name="activities" value="camel">
+                    Camel Ride
                 </label>
             </div>
         </div>
 
         <div class="form-group full-width">
-            <label for="remarques">Autres remarques</label>
-            <textarea id="remarques" placeholder="allergie alimentaire..."></textarea>
+            <label for="remarks">Other Remarks</label>
+            <textarea id="remarks" placeholder="Food allergies..."></textarea>
         </div>
 
         <div class="form-group full-width">
             <label class="checkbox-label">
                 <input type="checkbox" required>
-                J'ai lu et accepté les <a href="#" class="conditions-link">conditions générales</a>
+                I have read and accept the <a href="#" class="conditions-link">terms and conditions</a>
             </label>
         </div>
 
-        <button type="submit" class="submit-btn">RÉSERVER</button>
+        <button type="submit" class="submit-btn">BOOK NOW</button>
     </form>
 </section>
