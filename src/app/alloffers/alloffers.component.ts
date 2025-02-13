@@ -4,7 +4,6 @@ import { RouterLink } from '@angular/router';
 import { DataService } from '../../data.service';
 import { FormsModule } from '@angular/forms';
 
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-alloffers',
@@ -19,7 +18,6 @@ export class AlloffersComponent implements OnInit {
 
   constructor(
     private dataService: DataService,
-    private location: Location
   ) { }
 
   ngOnInit(): void {
