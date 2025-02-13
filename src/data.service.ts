@@ -27,7 +27,7 @@ export class DataService {
                         { time: '03:00 PM', description: 'Guided walk through the blue streets of the medina' },
                         { time: '06:00 PM', description: 'Relax at the hotel’s rooftop terrace with a view of the city' }
                     ],
-                    image: 'assets/images/pexels-photo-4652127.jpeg',
+                    image: 'assets/images/pexels-photo-3889765.webp',
                 },
                 {
                     day: 'Day 2',
@@ -49,7 +49,7 @@ export class DataService {
                         { time: '03:00 PM', description: 'Workshop on traditional Moroccan pottery' },
                         { time: '06:00 PM', description: 'Sunset hike to the Spanish Mosque for panoramic views' }
                     ],
-                    image: 'assets/images/wallpaperflare.com_wallpaper (1).jpg',
+                    image: 'assets/images/free-photo-of-blue-building-in-an-old-town.jpeg',
                 },
                 {
                     day: 'Day 4',
@@ -58,7 +58,7 @@ export class DataService {
                         { time: '11:00 AM', description: 'Visit a local cooperative to learn about olive oil and soap production' },
                         { time: '12:00 PM', description: 'Departure to Rabat' }
                     ],
-                    image: 'assets/images/wallpaperflare.com_wallpaper (1).jpg',
+                    image: 'assets/images/free-photo-of-market-in-an-old-town.jpeg',
                 }
             ]
         },
@@ -68,11 +68,11 @@ export class DataService {
             title: 'Merzouga',
             datedepart: 'May 10',
             datefin: 'May 15',
-            time: '5 nights and 4 days',
+            time: '4 nights and 3 days',
             description: 'Desert adventure with camel ride and overnight in a bivouac.',
             price: 6300,
             villedepart: 'Fes',
-            image: 'assets/images/Moroccan-Desert-Photography-Tours.jpg',
+            image: 'assets/images/free-photo-of-camel-caravan-traversing-merzouga-dunes.jpeg',
             stars: '⭐⭐⭐⭐',
             programmes: [
                 {
@@ -83,7 +83,7 @@ export class DataService {
                         { time: '05:00 PM', description: 'Camel ride at sunset to the desert camp' },
                         { time: '07:00 PM', description: 'Traditional Berber dinner under the stars with live music' }
                     ],
-                    image: 'assets/images/wallpaperflare.com_wallpaper (1).jpg',
+                    image: 'assets/images/free-photo-of-camel-caravan-traversing-merzouga-dunes.jpeg',
                 },
                 {
                     day: 'Day 2',
@@ -95,7 +95,7 @@ export class DataService {
                         { time: '04:00 PM', description: 'Sandboarding on the dunes' },
                         { time: '07:00 PM', description: 'Stargazing session with a local astronomer' }
                     ],
-                    image: 'assets/images/wallpaperflare.com_wallpaper (1).jpg',
+                    image: 'assets/images/pexels-photo-8369874.jpeg',
                 },
                 {
                     day: 'Day 3',
@@ -106,15 +106,9 @@ export class DataService {
                         { time: '04:00 PM', description: 'Free time to relax or explore the village' },
                         { time: '07:00 PM', description: 'Farewell dinner with a bonfire' }
                     ],
-                    image: 'assets/images/wallpaperflare.com_wallpaper (1).jpg',
+                    image: 'assets/images/pexels-photo-11294565.jpeg',
                 },
-                {
-                    day: 'Day 4',
-                    schedule: [
-                        { time: '07:00 AM', description: 'Breakfast and departure to Fes' }
-                    ],
-                    image: 'assets/images/wallpaperflare.com_wallpaper (1).jpg',
-                }
+
             ]
         },
         {
