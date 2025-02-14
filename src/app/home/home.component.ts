@@ -69,38 +69,29 @@ export class HomeComponent implements OnInit {
   testimonials: Testimonial[] = [
     {
       id: 1,
-      name: 'Anas Ahrarache',
+      name: 'Sofia L',
       role: 'Accountant',
       company: '',
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John',
-      feedback: 'Hadchi zwin tbarklah ',
+      feedback: 'Perfect trip! Well-organized, great guides, and amazing destinations',
       rating: 5
     },
     {
       id: 2,
-      name: 'Ayoub Arich',
+      name: 'Karim T',
       role: 'Journalist',
       company: '',
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Smith',
-      feedback: 'wooow',
+      feedback: 'Stress-free and unforgettable! Highly recommend this agency',
       rating: 5
     },
     {
       id: 3,
-      name: 'Hemmam Karmas',
+      name: 'Emma R',
       role: 'Managing Director',
       company: '',
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Tamara',
-      feedback: 'hadchi jamil',
-      rating: 5
-    },
-    {
-      id: 3,
-      name: 'Noureddine Rguig',
-      role: 'Managing Director',
-      company: '',
-      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Tamara',
-      feedback: 'yalaraw3a ',
+      feedback: 'Fun and well-planned, just needed more free time.',
       rating: 5
     }
   ];
