@@ -13,11 +13,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "allowedCommonJsDependencies": [
+        "aos"
+      ],
             "assets": [
               "src/assets",
               "src/favicon.ico"
             ],
-            "outputPath": "dist/travel-agency",
+            "outputPath": "dist/TRAVELAGENCY",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -42,13 +45,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2mb",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "10kB",
+                  "maximumError": "15kB"
                 }
               ],
               "outputHashing": "all"
@@ -95,6 +98,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
